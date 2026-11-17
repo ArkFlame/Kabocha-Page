@@ -10,9 +10,9 @@ Follow [.agents/docs/kabocha-parity-goal.md](.agents/docs/kabocha-parity-goal.md
 ## Repository and deployment facts
 
 - Origin: https://github.com/ArkFlame/Kabocha-Page.git, branch main, standalone Astro site at the repository root.
-- Pages is enabled with build_type: workflow; the current custom domain is kabocha.arkflame.com at root. Keep public/CNAME aligned; do not change DNS or the Pages domain setting.
-- Astro defaults to site https://kabocha.arkflame.com and base /. Workflow derives origin/base_path from configure-pages and normalizes origin to HTTPS and blank root base to /. PUBLIC_* overrides remain supported. Internal links use import.meta.env.BASE_URL.
-- Production build and regression tests have passed locally. Live deployment remains pending commit/push, workflow success, and live route verification. GitHub Pages HTTPS enforcement is not yet enabled: the API PUT failed with certificate-not-ready HTTP 404; browser HTTPS success is not proof of GitHub enforcement. A local build is not deployment verification.
+- Current custom domain is kabocha.arkflame.com at root; keep public/CNAME aligned and do not change DNS or Pages domain settings.
+- Astro defaults to https://kabocha.arkflame.com and base /. Workflow derives site/base from configure-pages, normalizing to HTTPS and root; PUBLIC_* overrides remain supported.
+- Root-path fix commit 95705089b32ecd13bc2d26da908beef9fd5cdea6 was pushed; Pages workflow 44141125159 succeeded. Primary reports production build, root asset checks and production browser smoke checks passed. TLS hostname validation passed, but GitHub Pages https_enforced remains false/not yet confirmed. See deployment.md and progress.md; historical /Kabocha-Page checks are not evidence for the current domain.
 
 ## Durable docs
 

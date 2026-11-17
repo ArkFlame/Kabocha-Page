@@ -1,17 +1,17 @@
 # Kabocha-Page progress
 
-Updated: 2026-11-17. Implementation and local verification are complete for the recorded scope; publication is not complete until the implementation is pushed and live Pages checks pass. The 100% parity UI is publication projection, not backend QA evidence.
+Updated: 2026-11-17. Root-path fix commit 95705089b32ecd13bc2d26da908beef9fd5cdea6 is pushed; current-domain workflow and reported live checks passed. The 100% parity UI is publication projection, not backend QA evidence.
 
 ## Status checklist
 
 | Scope | Status | Evidence |
 | --- | --- | --- |
 | Assets and parity projection | PASS (scoped) | Worker checks in [assets-data.md](assets-data.md): node --check scripts/sync-parity.mjs, sync, offline fallback, projection sums and favicon checksum. Public projection is 564/564; independent source totals remain 449 complete, 114 partial, 1 remaining. |
-| Implementation build | PASS | Primary reports final npm run build exit 0; generated 10 routes: /, /download, /developers, /sponsor, /contributors, /stats, /tracker, /parity, /donate, /404.html. Final build took 3.33s after root overflow/clip fix. An earlier combined build timed out at 120s; a 600s rerun succeeded in 177s, followed by the latest 3.33s build. |
-| Regression tests | PASS | node --test tests/*.test.mjs src/kabocha/pages/stats/stats.test.mjs exit 0: 22/22 passed, 0 failed. Includes tracker parsing, slime/offline behavior, exact-token highlighting, map structure, and original tests. |
+| Implementation build | PASS | Primary reports latest npm run build exit 0; 10 root routes generated. Root-path build took 8.96s; final build after review fixes took 6.84s. |
+| Regression tests | PASS | node --test tests/*.test.mjs src/kabocha/pages/stats/stats.test.mjs passed 22/22 before duplicate-header coverage was added. Subsequently 16 built-artifact tests and five tracker cases passed separately. Current-domain node --test tests/site.test.mjs passed 17/17, including the root/custom-domain regression. Do not imply one combined 23-test run. |
 | Tracker detail adaptation | PASS (scoped) | All 564 rich-detail rows matched; 0 unmatched. Six unverified source paths withheld. Raw source audit (449/114/1) kept separate from the all-complete launch projection. See [claude-parity-tsv-details.md](claude-parity-tsv-details.md). |
 | Local browser matrix | PASS (scoped) | 30 route × viewport captures (1342×900, 768×1024, 390×844); no overflow, broken images, or browser errors. Eight selected captures and manifest/metrics under .agents/docs/evidence/local/; full capture set at /tmp/opencode/kabocha-evidence/local. First matrix wait timed out on offscreen lazy avatars; harness was corrected to wait only for fonts/rendered data. Tablet root clipping was fixed. |
-| Map and accessibility checks | PASS (scoped) | 188 SVG map paths rendered; stats accessibility audit 49 passes, 0 violations. Home's initial contrast issue was fixed; final home audit remains with targeted browser QA. |
+| Map and accessibility checks | PASS (scoped) | 188 SVG map paths rendered; stats accessibility audit 49 passes, 0 violations. Home's initial contrast issue was fixed; targeted keyboard/locales/filter/collapse checks remain incomplete (see browser-verification.md). |
 | Reference inventory | PASS (scoped) | [reference-inventory.md](reference-inventory.md), 16 durable reference captures. |
 | Targeted interactions and release review | IN PROGRESS | Browser QA and read-only release review underway; see their final notes when available. |
 | Pages deployment and live routes | PENDING | Pages is provisioned for kabocha.arkflame.com at root; HTTPS enforcement is pending certificate issuance. The previous /Kabocha-Page build produced broken asset URLs after the domain change. Root-path fix is pending build/deploy, live route and asset checks. |

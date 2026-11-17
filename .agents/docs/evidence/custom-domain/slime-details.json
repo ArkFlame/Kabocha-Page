@@ -1,0 +1,21 @@
+{
+  "checks": [
+    {
+      "text": "Size, split and jump attack",
+      "visible": true
+    },
+    {
+      "text": "Slime chunk and swamp spawn rules",
+      "visible": true
+    },
+    {
+      "text": "Player collision damage",
+      "visible": true
+    }
+  ],
+  "summary": true,
+  "source": [
+    "https://github.com/ArkFlame/Kabocha/blob/master/crates/pumpkin-core/src/entity/mob/slime.rs"
+  ],
+  "hasStalePending": false
+}

@@ -1,0 +1,116 @@
+[
+  {
+    "path": "/",
+    "status": 200,
+    "bytes": 103530,
+    "type": "text/html; charset=utf-8"
+  },
+  {
+    "path": "download/",
+    "status": 200,
+    "bytes": 45851,
+    "type": "text/html; charset=utf-8"
+  },
+  {
+    "path": "developers/",
+    "status": 200,
+    "bytes": 179494,
+    "type": "text/html; charset=utf-8"
+  },
+  {
+    "path": "sponsor/",
+    "status": 200,
+    "bytes": 49840,
+    "type": "text/html; charset=utf-8"
+  },
+  {
+    "path": "contributors/",
+    "status": 200,
+    "bytes": 49090,
+    "type": "text/html; charset=utf-8"
+  },
+  {
+    "path": "stats/",
+    "status": 200,
+    "bytes": 58752,
+    "type": "text/html; charset=utf-8"
+  },
+  {
+    "path": "tracker/",
+    "status": 200,
+    "bytes": 507961,
+    "type": "text/html; charset=utf-8"
+  },
+  {
+    "path": "parity/",
+    "status": 200,
+    "bytes": 507961,
+    "type": "text/html; charset=utf-8"
+  },
+  {
+    "path": "donate/",
+    "status": 200,
+    "bytes": 682,
+    "type": "text/html; charset=utf-8"
+  },
+  {
+    "path": "404.html",
+    "status": 200,
+    "bytes": 43079,
+    "type": "text/html; charset=utf-8"
+  },
+  {
+    "path": "kabocha.webp",
+    "status": 200,
+    "bytes": 41924,
+    "type": "image/webp"
+  },
+  {
+    "path": "kabocha-clip.webp",
+    "status": 200,
+    "bytes": 115258,
+    "type": "image/webp"
+  },
+  {
+    "path": "assets/icon.svg",
+    "status": 200,
+    "bytes": 56061,
+    "type": "image/svg+xml"
+  },
+  {
+    "path": "favicon.png",
+    "status": 200,
+    "bytes": 33814,
+    "type": "image/png"
+  },
+  {
+    "path": "fonts/bricolage-grotesque.css",
+    "status": 200,
+    "bytes": 1410,
+    "type": "text/css; charset=utf-8"
+  },
+  {
+    "path": "fonts/bricolage-grotesque-latin.woff2",
+    "status": 200,
+    "bytes": 76888,
+    "type": "font/woff2"
+  },
+  {
+    "path": "_astro/client.C5RI7xnT.js",
+    "status": 200,
+    "bytes": 215568,
+    "type": "application/javascript; charset=utf-8"
+  },
+  {
+    "path": "_astro/entries.CrVuGlaQ.js",
+    "status": 200,
+    "bytes": 609669,
+    "type": "application/javascript; charset=utf-8"
+  },
+  {
+    "path": "_astro/index.CKLGMdyQ.css",
+    "status": 200,
+    "bytes": 52639,
+    "type": "text/css; charset=utf-8"
+  }
+]
