@@ -3,8 +3,8 @@ import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  site: process.env.PUBLIC_SITE_URL ?? 'https://arkflame.com',
-  base: process.env.PUBLIC_BASE_PATH ?? '/Kabocha-Page',
+  site: process.env.PUBLIC_SITE_URL ?? 'https://kabocha.arkflame.com',
+  base: process.env.PUBLIC_BASE_PATH || '/',
   output: 'static',
   devToolbar: { enabled: false },
   build: { format: 'directory' },

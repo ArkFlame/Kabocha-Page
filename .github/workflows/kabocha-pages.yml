@@ -34,11 +34,30 @@ jobs:
         id: pages
         uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
 
-      - name: Pages metadata
+      - name: Normalize Pages URL for HTTPS deployment
+        id: site
+        env:
+          PAGES_ORIGIN: ${{ steps.pages.outputs.origin }}
+          PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
         run: |
-          echo "origin=${{ steps.pages.outputs.origin }}" >> "$GITHUB_STEP_SUMMARY"
-          echo "base_path=${{ steps.pages.outputs.base_path }}" >> "$GITHUB_STEP_SUMMARY"
-          echo "base_url=${{ steps.pages.outputs.base_url }}" >> "$GITHUB_STEP_SUMMARY"
+          node --input-type=module <<'NODE'
+          const site = new URL(process.env.PAGES_ORIGIN);
+          // configure-pages can report http while the custom-domain certificate is provisioning.
+          site.protocol = 'https:';
+          const base = process.env.PAGES_BASE_PATH || '/';
+          if (base !== '/' && !base.startsWith('/')) throw new Error('Invalid Pages base path: ' + base);
+          const outputs = [
+            ['site', site.origin],
+            ['base', base],
+          ];
+          for (const [name, value] of outputs) {
+            const line = name + '=' + value;
+            process.stdout.write(line + '\n');
+            await import('node:fs/promises').then(({ appendFile }) => appendFile(process.env.GITHUB_OUTPUT, line + '\n'));
+          }
+          await import('node:fs/promises').then(({ appendFile }) => appendFile(process.env.GITHUB_STEP_SUMMARY,
+            'Pages origin: ' + site.origin + '\n\nPages base path: ' + base + '\n'));
+          NODE
 
       - name: Install dependencies
         run: npm ci
@@ -46,10 +65,9 @@ jobs:
       - name: Build static site
         run: npm run build
         env:
-          # Org custom domain (arkflame.com) serving the project site at /Kabocha-Page/.
-          # Explicit HTTPS: the Pages API reported an http origin while the certificate was provisioning.
-          PUBLIC_SITE_URL: https://arkflame.com
-          PUBLIC_BASE_PATH: /Kabocha-Page
+          # Derived from configure-pages so root deployments never inherit a repository path.
+          PUBLIC_SITE_URL: ${{ steps.site.outputs.site }}
+          PUBLIC_BASE_PATH: ${{ steps.site.outputs.base }}
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0

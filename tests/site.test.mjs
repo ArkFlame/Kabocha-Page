@@ -16,7 +16,7 @@ function normalizeBase(raw) {
   return '/' + value.replace(/^\/+/, '').replace(/\/+$/, '');
 }
 
-const BASE = normalizeBase(process.env.PUBLIC_BASE_PATH ?? '/Kabocha-Page');
+const BASE = normalizeBase(process.env.PUBLIC_BASE_PATH ?? '/');
 
 const ROUTES = [
   { url: '/', file: 'index.html' },
@@ -200,6 +200,21 @@ test('built pages expose accessible navigation landmarks and image alternatives'
   }
 
   assert.equal(failures.length, 0, formatFailures(failures));
+});
+
+
+test('custom-domain deployment defaults to root and preserves Pages-derived overrides', () => {
+  const config = readFileSync(join(ROOT, 'astro.config.mjs'), 'utf8');
+  const workflow = readFileSync(join(ROOT, '.github', 'workflows', 'kabocha-pages.yml'), 'utf8');
+  const cname = readFileSync(join(ROOT, 'public', 'CNAME'), 'utf8').trim();
+
+  assert.equal(cname, 'kabocha.arkflame.com');
+  assert.match(config, /PUBLIC_SITE_URL \?\? 'https:\/\/kabocha\.arkflame\.com'/);
+  assert.match(config, /PUBLIC_BASE_PATH \|\| '\/'/);
+  assert.match(workflow, /PUBLIC_SITE_URL: \$\{\{ steps\.site\.outputs\.site \}\}/);
+  assert.match(workflow, /PUBLIC_BASE_PATH: \$\{\{ steps\.site\.outputs\.base \}\}/);
+  assert.match(workflow, /PAGES_BASE_PATH \|\| '\/'/);
+  assert.doesNotMatch(workflow, /PUBLIC_BASE_PATH: \/Kabocha-Page/);
 });
 
 test('site-relative references resolve under the configured base and built output', () => {

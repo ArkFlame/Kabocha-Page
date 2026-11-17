@@ -41,3 +41,16 @@ Scope: read-only source review for the release reviewer request. No app/source/c
 ## Review limits
 
 This was source inspection only. The provided build/test/browser results were treated as primary-reported evidence, not independently rerun. No live URLs were requested. Locale completeness, service correctness/availability, production rendering, and actual remote deployment remain outside this review; the existing docs already record outstanding verification.
+
+## Follow-up verification and disposition (2026-11-17)
+
+Primary reports all four medium findings resolved; the original findings above are retained as review history.
+
+- Nested main landmarks: shared page wrapper is now neutral; the download and sponsor pages each have one main landmark. Production browser audit reported exactly one global main per page.
+- Upstream docs/market links: accessible labels and titles were added to identify the upstream services and applicability limits.
+- Mutable action tags: all five GitHub Actions references are pinned to verified full commit SHAs; readable version comments retained.
+- Duplicate TSV headers: required and optional duplicate headers are now rejected; regression cases cover the guard.
+
+Primary reports final build exit 0 (6.84s after these review fixes), 16 built-artifact tests passed, and the additional five tracker cases passed after the duplicate-header guard. The earlier full regression command passed 22/22 before that added case; a combined 23-test command was not run. Live browser smoke evidence is in .agents/docs/evidence/live/ with results.json; 15 HTTPS probes returned expected HTTP 200 for pages/assets and 404 for the unknown path. Production-browser evidence is reported as 10 routes at desktop plus home/tracker/stats at mobile, fonts and hydration ready, zero failed first-party assets/page errors/broken images/horizontal overflow, and 176 SVG world-map country paths. Targeted interaction QA remains underway.
+
+Remaining limitations: full visual parity is not claimed; service-backed release/telemetry/funding data and deeper backend source details require separate audit. Locale coverage is partial with English fallback. This follow-up incorporates primary-reported verification; it was not independently rerun by the read-only reviewer.

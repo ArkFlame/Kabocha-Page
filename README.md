@@ -21,7 +21,7 @@ npm run preview
 
 Local builds default to the production Pages site; `PUBLIC_SITE_URL` and `PUBLIC_BASE_PATH` override `site` and `base` at build time.
 
-Deployment targets **https://arkflame.com/Kabocha-Page/**: `ArkFlame` organization Pages serves this project site under the custom domain `arkflame.com`, so the base path is `/Kabocha-Page`. For a different host, set `PUBLIC_SITE_URL` and `PUBLIC_BASE_PATH` accordingly; for root-domain hosting use `PUBLIC_BASE_PATH=/`.
+Deployment targets **https://kabocha.arkflame.com/** at the custom-domain root (`PUBLIC_BASE_PATH=/`). The workflow derives origin and base path from GitHub Pages metadata, normalizes the origin to HTTPS, and handles an empty base path as `/`. `PUBLIC_SITE_URL` and `PUBLIC_BASE_PATH` remain available for local or alternate-host overrides. The root `public/CNAME` records `kabocha.arkflame.com`.
 
 ## Deployment
 
@@ -29,11 +29,11 @@ Deployment runs through the official GitHub Pages artifact flow in `.github/work
 
 - triggers on every push to `main` and on manual `workflow_dispatch`;
 - installs with `npm ci` on Node 24 and builds with `npm run build`;
-- builds with `PUBLIC_SITE_URL=https://arkflame.com` and `PUBLIC_BASE_PATH=/Kabocha-Page`, and reports the `configure-pages` detected origin/base in the run summary;
+- derives `PUBLIC_SITE_URL` and `PUBLIC_BASE_PATH` from `configure-pages` outputs (HTTPS-normalized origin; empty base path becomes `/`);
 - uploads `dist/` via `actions/upload-pages-artifact` and publishes via `actions/deploy-pages`;
 - requests only `contents: read`, `pages: write` and `id-token: write`.
 
-Live URL: **https://arkflame.com/Kabocha-Page/**. The Pages site is enabled with `build_type: workflow`; the custom domain is inherited from the organization and is not managed by this repository.
+Live target: **https://kabocha.arkflame.com/**. The custom domain now targets the root path; `public/CNAME` is included in the Pages artifact. HTTPS enforcement/certificate issuance is pending; do not infer it from an HTTPS browser response alone.
 
 One-time provisioning: in **Settings → Pages**, set **Source** to **GitHub Actions**. No build branch, `gh-pages` branch, base path or `.nojekyll` file is needed — artifact deployments are served directly by Pages without Jekyll processing.
 
@@ -41,7 +41,7 @@ Operational details, required settings, provisioning commands and the current (u
 
 ## Parity content
 
-`scripts/sync-parity.mjs` reads `../docs/PARITY.tsv` when the site sits next to the source repository, otherwise it fetches the public tracker from GitHub and writes `src/data/parity.generated.json`. The rendered audit lives at `/Kabocha-Page/parity/`.
+`scripts/sync-parity.mjs` reads `../docs/PARITY.tsv` when the site sits next to the source repository, otherwise it fetches the public tracker from GitHub and writes `src/data/parity.generated.json`. The rendered audit lives at `/parity/`.
 
 Two different things are shown on that page, and they must not be conflated:
 

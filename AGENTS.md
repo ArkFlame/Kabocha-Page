@@ -10,9 +10,9 @@ Follow [.agents/docs/kabocha-parity-goal.md](.agents/docs/kabocha-parity-goal.md
 ## Repository and deployment facts
 
 - Origin: https://github.com/ArkFlame/Kabocha-Page.git, branch main, standalone Astro site at the repository root.
-- Pages is enabled with build_type: workflow; API URL is https://arkflame.com/Kabocha-Page/, HTTPS enforced. The inherited organization custom domain is arkflame.com (cname: null); do not change organization DNS/domain settings.
-- Actual base is /Kabocha-Page (astro.config.mjs default), production origin https://arkflame.com. Internal links should use import.meta.env.BASE_URL.
-- Production build and regression tests have passed locally. Live deployment remains pending commit/push, workflow success, and live route verification. A local build is not deployment verification.
+- Pages is enabled with build_type: workflow; the current custom domain is kabocha.arkflame.com at root. Keep public/CNAME aligned; do not change DNS or the Pages domain setting.
+- Astro defaults to site https://kabocha.arkflame.com and base /. Workflow derives origin/base_path from configure-pages and normalizes origin to HTTPS and blank root base to /. PUBLIC_* overrides remain supported. Internal links use import.meta.env.BASE_URL.
+- Production build and regression tests have passed locally. Live deployment remains pending commit/push, workflow success, and live route verification. GitHub Pages HTTPS enforcement is not yet enabled: the API PUT failed with certificate-not-ready HTTP 404; browser HTTPS success is not proof of GitHub enforcement. A local build is not deployment verification.
 
 ## Durable docs
 

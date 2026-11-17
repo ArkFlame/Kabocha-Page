@@ -14,7 +14,7 @@ Updated: 2026-11-17. Implementation and local verification are complete for the 
 | Map and accessibility checks | PASS (scoped) | 188 SVG map paths rendered; stats accessibility audit 49 passes, 0 violations. Home's initial contrast issue was fixed; final home audit remains with targeted browser QA. |
 | Reference inventory | PASS (scoped) | [reference-inventory.md](reference-inventory.md), 16 durable reference captures. |
 | Targeted interactions and release review | IN PROGRESS | Browser QA and read-only release review underway; see their final notes when available. |
-| Pages deployment and live routes | PENDING | Pages is provisioned and HTTPS enforced at https://arkflame.com/Kabocha-Page/; deployment still requires commit/push, successful workflow, and live route/asset checks. |
+| Pages deployment and live routes | PENDING | Pages is provisioned for kabocha.arkflame.com at root; HTTPS enforcement is pending certificate issuance. The previous /Kabocha-Page build produced broken asset URLs after the domain change. Root-path fix is pending build/deploy, live route and asset checks. |
 
 ## Fidelity and known limitations
 
@@ -29,4 +29,4 @@ Updated: 2026-11-17. Implementation and local verification are complete for the 
 
 1. Finish targeted browser interactions and read-only release review; update this log with their actual results.
 2. Commit/push the implementation (primary owns this); confirm the Pages workflow succeeds.
-3. Verify live HTTPS and route/assets at https://arkflame.com/Kabocha-Page/, including /, /parity/, and a nested route; primary records evidence here and in [deployment.md](deployment.md).
+3. Verify live HTTPS and route/assets at https://kabocha.arkflame.com/, including /, /parity/, and a nested route; primary records evidence here and in [deployment.md](deployment.md).
