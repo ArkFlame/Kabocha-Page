@@ -1,0 +1,60 @@
+{
+  "nav": {
+    "developers": "Lập trình viên",
+    "docs": "Tài liệu",
+    "community": "Cộng đồng",
+    "market": "Chợ",
+    "tracker": "Trình theo dõi",
+    "download": "Tải xuống",
+    "language": "Ngôn ngữ",
+    "menu": "Menu"
+  },
+  "hero": {
+    "title": "Máy chủ Minecraft khởi động chỉ trong <hl>5 ms.</hl>",
+    "benchTitle": "Thời gian khởi động",
+    "benchNote": "Cùng thế giới, cùng loại máy, đo từ lúc khởi động đến lúc \"người chơi có thể tham gia\".",
+    "runAgain": "Chạy lại",
+    "loading": "đang tải",
+    "ready": "sẵn sàng",
+    "lede": "Kabocha là 1 phần mềm máy chủ Minecraft viết bằng Rust. Không cần cài đặt Java, chạy chỉ với một tệp, người chơi Java và Bedrock trên cùng một thế giới.",
+    "download": "Tải xuống",
+    "docs": "Đọc tài liệu"
+  },
+  "facts": {
+    "title": "Kabocha có gì <hl>hiện tại</hl>",
+    "items": [
+      {
+        "big": "Không JVM (máy ảo Java)",
+        "lead": "Một tệp thực thi bản địa. Không cần cài đặt, không cờ tùy chỉnh, không tập lệnh khởi động.",
+        "rest": "Thả nó vào 1 thư mục và chạy."
+      },
+      {
+        "big": "~100 MB",
+        "lead": "Bộ nhớ RAM khi vừa tải 1 thế giới.",
+        "rest": "Vanilla chiếm mất 1,8 GB dù chưa có ai tham gia."
+      },
+      {
+        "big": "Toàn bộ nhân",
+        "lead": "Viết để chạy đa luồng từ commit đầu tiên,",
+        "rest": "không phải là một luồng chính được lắp thêm các luồng phụ trợ."
+      },
+      {
+        "big": "Java + Bedrock",
+        "lead": "2 phiên bản cùng trong 1 thế giới.",
+        "rest": "Có sẵn, không proxy ở trước, không cần plugin để cài đặt."
+      },
+      {
+        "big": "9 ngôn ngữ lập trình",
+        "lead": "Viết plugin bằng Rust, Kotlin, Python, Go, C#, C, D, Zig hoặc TypeScript.",
+        "rest": "API đồng nhất ở dưới, chọn ngôn ngữ lập trình bạn đã biết."
+      },
+      {
+        "big": "GPL-3.0",
+        "lead": "Toàn bộ máy chủ, không phải cái nhân với gói trả phí.",
+        "rest": "Đọc nó, rẽ nhánh nó, dùng nó."
+      }
+    ],
+    "earlyTag": "Bản phát hành chính thức",
+    "earlyBody": "<b>Kabocha đã hoàn thiện tính năng.</b> Mọi tính năng vanilla được theo dõi đều đã triển khai. Xem <docs>tài liệu</docs> và <report>báo cáo lỗi</report>."
+  }
+}

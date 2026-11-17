@@ -1,0 +1,1549 @@
+{
+  "nav": {
+    "developers": "开发者",
+    "docs": "文档",
+    "community": "社区",
+    "market": "插件市场",
+    "tracker": "进度",
+    "download": "下载",
+    "language": "语言",
+    "menu": "菜单",
+    "main": "主导航",
+    "docsTranslations": "文档还提供<de>德语</de>、<ja>日语</ja>、<nl>荷兰语</nl>和<pt>葡萄牙语</pt>版本。",
+    "panels": {
+      "developers": {
+        "writePlugins": "编写插件",
+        "pickLanguage": "选择语言",
+        "hackServer": "参与服务端开发",
+        "howPluginsWork": {
+          "label": "插件如何工作",
+          "hint": "API、运行时和打包方式。"
+        },
+        "fromBukkit": {
+          "label": "从 Bukkit 迁移",
+          "hint": "事件、命令和物品栏的对应关系。"
+        },
+        "examples": {
+          "label": "示例插件",
+          "hint": "简短、完整，可直接复制使用。"
+        },
+        "contributing": {
+          "label": "参与贡献",
+          "hint": "环境配置、代码风格和 PR 审核流程。"
+        },
+        "architecture": {
+          "label": "架构",
+          "hint": "服务端的整体结构。"
+        },
+        "networking": {
+          "label": "网络通信",
+          "hint": "数据包、身份验证和 MSMP。"
+        },
+        "source": {
+          "label": "GitHub 源码",
+          "hint": "议题、PR 和发布版本。"
+        }
+      },
+      "docs": {
+        "runServer": "运行服务器",
+        "configure": "配置",
+        "about": "关于",
+        "gettingStarted": {
+          "label": "快速开始",
+          "hint": "下载、首次运行和迎接第一位玩家。"
+        },
+        "migration": {
+          "label": "从 Paper 或 Spigot 迁移",
+          "hint": "哪些内容可以沿用，哪些不能。"
+        },
+        "patchBukkit": {
+          "label": "PatchBukkit",
+          "hint": "继续运行现有的 Bukkit 和 Paper 插件。"
+        },
+        "troubleshooting": {
+          "label": "故障排查",
+          "hint": "常见问题及其含义。"
+        },
+        "basicSettings": {
+          "label": "基本设置",
+          "hint": "端口、MOTD、视距和白名单。"
+        },
+        "world": {
+          "label": "世界",
+          "hint": "生成、保存和出生点。"
+        },
+        "bedrock": {
+          "label": "基岩版玩家",
+          "hint": "让基岩版客户端加入服务器。"
+        },
+        "proxy": {
+          "label": "通过代理连接",
+          "hint": "Velocity 和 BungeeCord 转发。"
+        },
+        "configReference": {
+          "label": "全部配置项",
+          "hint": "完整的配置参考。"
+        },
+        "benchmarks": {
+          "label": "性能测试",
+          "hint": "这些数据是如何测得的。"
+        },
+        "helping": {
+          "label": "提供帮助",
+          "hint": "无需编写代码也能参与贡献。"
+        }
+      },
+      "community": {
+        "talk": "交流",
+        "follow": "关注进展",
+        "discord": {
+          "label": "Discord",
+          "hint": "寻求帮助、开发交流和公告。"
+        },
+        "x": {
+          "label": "X",
+          "hint": "简短动态。"
+        },
+        "youtube": {
+          "label": "YouTube",
+          "hint": "演示和分享。"
+        },
+        "blog": {
+          "label": "博客",
+          "hint": "版本说明和长篇文章。"
+        },
+        "stats": {
+          "label": "统计",
+          "hint": "当前正在运行 Kabocha 的服务器。"
+        },
+        "parity": {
+          "label": "原版功能进度",
+          "hint": "哪些功能已实现、部分实现或仍在计划中。"
+        },
+        "contributors": {
+          "label": "贡献者",
+          "hint": "共同开发 Kabocha 的人们。"
+        },
+        "sponsor": {
+          "label": "赞助",
+          "hint": "赞助档位和社区权益。"
+        }
+      }
+    }
+  },
+  "hero": {
+    "title": "只需 <hl>5 毫秒</hl> 即可启动的 Minecraft 服务器。",
+    "benchTitle": "启动时间",
+    "benchNote": "同一个世界、同一台机器，从启动开始计时，直到玩家可以加入。",
+    "runAgain": "再运行一次",
+    "loading": "加载中",
+    "ready": "已就绪",
+    "lede": "Kabocha 是用 Rust 编写的 Minecraft 服务器。无需安装 Java，只需运行一个文件，Java 版和基岩版玩家便能加入同一个世界。",
+    "download": "下载",
+    "docs": "阅读文档",
+    "secondsUnit": "秒"
+  },
+  "facts": {
+    "title": "<hl>如今</hl>的 Kabocha",
+    "items": [
+      {
+        "big": "无需 JVM",
+        "lead": "一个原生可执行文件，无需安装、调整启动参数或编写启动脚本。",
+        "rest": "放进文件夹即可运行。"
+      },
+      {
+        "big": "~100 MB",
+        "lead": "加载世界后空闲时的内存占用。",
+        "rest": "原版在尚无玩家加入时就已占用约 1.8 GB。"
+      },
+      {
+        "big": "用上所有核心",
+        "lead": "从第一次提交起就为并行处理而设计，",
+        "rest": "而非在单一主线程上附加辅助线程。"
+      },
+      {
+        "big": "Java版 + 基岩版",
+        "lead": "两个版本的玩家加入同一个世界。",
+        "rest": "内置支持，无需前置代理，也无需安装插件。"
+      },
+      {
+        "big": "9 种语言",
+        "lead": "用 Rust、Kotlin、Python、Go、C#、C、D、Zig 或 TypeScript 编写插件。",
+        "rest": "底层使用同一套 API，选择你熟悉的语言即可。"
+      },
+      {
+        "big": "GPL-3.0",
+        "lead": "整个服务端都采用这一许可，不设付费功能层级。",
+        "rest": "自由阅读、分叉和分发。"
+      }
+    ],
+    "earlyTag": "正式发布",
+    "earlyBody": "<b>Kabocha 功能完整。</b>所有跟踪的原版功能均已实现。查看<docs>文档</docs>并<report>报告问题</report>。"
+  },
+  "checklist": {
+    "title": "功能<hl>对照表</hl>",
+    "description": "对比 Kabocha、原版、Paper 和 Folia 当前提供的功能。带圆点的标记附有说明。",
+    "feature": "功能",
+    "support": {
+      "yes": "支持",
+      "partial": "部分支持",
+      "no": "不支持"
+    },
+    "noteLabel": "{status}，附有说明",
+    "items": {
+      "startup": {
+        "feature": "不到一秒即可启动",
+        "detail": "JVM 还没预热完，就已经准备就绪。",
+        "notes": {
+          "1": "原版需要等待 JVM 启动和世界加载。",
+          "3": "需要初始化的内容更多，通常比 Paper 更慢。"
+        }
+      },
+      "idleCpu": {
+        "feature": "空闲时 CPU 占用低",
+        "detail": "无人在线时，CPU 占用接近零。",
+        "notes": {}
+      },
+      "memory": {
+        "feature": "内存占用低",
+        "detail": "加载世界后约占用 100 MB。",
+        "notes": {}
+      },
+      "parallel": {
+        "feature": "利用所有核心",
+        "detail": "从设计之初就采用并行处理，不依赖单一主线程。",
+        "notes": {
+          "0": "游戏逻辑和后台任务都跨线程运行，不仅限于区块加载。",
+          "3": "仅 Tick 处理支持并行。"
+        }
+      },
+      "bukkitPlugins": {
+        "feature": "Bukkit 和 Paper 插件",
+        "detail": "Bukkit 和 Paper 插件可通过 PatchBukkit 运行。",
+        "notes": {
+          "0": "Bukkit 和 Paper 插件可通过 PatchBukkit 运行。",
+          "2": "原生支持。",
+          "3": "情况各异。许多插件需要更新才能适配 Folia 的线程模型。"
+        }
+      },
+      "editions": {
+        "feature": "Java版和基岩版玩家",
+        "detail": "两个版本的玩家共用一个世界，无需代理。",
+        "notes": {
+          "0": "内置支持。",
+          "2": "通过 Geyser 等外部插件实现。",
+          "3": "通过外部插件实现，且 Folia 的线程模型会增加配置难度。"
+        }
+      },
+      "pluginLanguages": {
+        "feature": "支持 9 种语言的插件 API",
+        "detail": "Rust、Kotlin、Python、Go、C#、C、D、Zig、TypeScript。",
+        "notes": {}
+      },
+      "configuration": {
+        "feature": "精细的配置选项",
+        "detail": "每个子系统都有独立的配置文件。",
+        "notes": {}
+      },
+      "openSource": {
+        "feature": "开源",
+        "detail": "整个服务端采用 GPL-3.0 许可。",
+        "notes": {
+          "2": "仅补丁开源。",
+          "3": "仅补丁开源。"
+        }
+      },
+      "worldFormats": {
+        "feature": "多种世界格式",
+        "detail": "支持 Anvil 及其他更高效的格式。",
+        "notes": {
+          "3": "仅支持 Anvil。"
+        }
+      },
+      "executable": {
+        "feature": "单个可执行文件，无需 Java",
+        "detail": "下载、运行，即可使用。",
+        "notes": {}
+      }
+    }
+  },
+  "pluginLanguages": {
+    "title": "使用这些语言编写插件",
+    "market": "或从插件市场安装现成插件"
+  },
+  "tryIt": {
+    "title": "找台备用机器试试。",
+    "body": "只需一个文件。让它与你现有的服务器并行运行，用客户端连接，在正式采用前看看它能否满足你的世界所需。",
+    "github": "在 GitHub 上加星",
+    "contributors": "认识贡献者"
+  },
+  "tracker": {
+    "title": "原版功能<hl>实现进度</hl>",
+    "description": "所有跟踪的原版功能均已实现。",
+    "overallProgress": "总体进度",
+    "summary": "{count} 个条目已实现，更新于 {updated}。",
+    "status": {
+      "done": "已实现",
+      "partial": "部分实现",
+      "planned": "计划中"
+    },
+    "progressLabel": "已实现、部分实现和计划中条目的占比",
+    "issueState": {
+      "open": "未关闭",
+      "closed": "已关闭",
+      "merged": "已合并"
+    },
+    "source": "源码",
+    "issuesAndPrs": "议题和 PR",
+    "issues": "议题",
+    "registered": "已注册 ID",
+    "browseTitle": "逐项查看<hl>进度</hl>",
+    "browseDescription": "选择一个分类，再按状态筛选或搜索。",
+    "category": "分类",
+    "statusLabel": "状态",
+    "any": "全部",
+    "searchPlaceholder": "搜索条目、AI 目标、关键词……",
+    "searchLabel": "搜索条目",
+    "showing": "显示 {visible} / {total} {unit}",
+    "trackingIssue": "跟踪议题 #{number}",
+    "collapseAll": "全部收起",
+    "expandAll": "全部展开",
+    "empty": "没有符合筛选条件的条目。",
+    "other": "其他",
+    "sourceTag": "源自代码",
+    "sourceBody": "<b>数据来源。</b>所有跟踪的原版功能均已实现。清单来自 <data>docs/PARITY.tsv</data>。",
+    "categories": {
+      "all": {
+        "label": "全部",
+        "unit": "个条目",
+        "description": "所有分类中的全部跟踪条目。"
+      },
+      "entities": {
+        "label": "实体",
+        "unit": "个实体",
+        "description": "所有跟踪的原版功能均已实现。"
+      },
+      "blocks": {
+        "label": "方块",
+        "unit": "项方块行为",
+        "description": "所有跟踪的原版功能均已实现。"
+      },
+      "items": {
+        "label": "物品",
+        "unit": "项物品行为",
+        "description": "所有跟踪的原版功能均已实现。"
+      },
+      "commands": {
+        "label": "命令",
+        "unit": "条命令",
+        "description": "所有跟踪的原版功能均已实现。"
+      },
+      "redstone": {
+        "label": "红石",
+        "unit": "个组件",
+        "description": "所有跟踪的原版功能均已实现。"
+      },
+      "combat": {
+        "label": "战斗",
+        "unit": "项机制",
+        "description": "所有跟踪的原版功能均已实现。"
+      },
+      "world": {
+        "label": "世界",
+        "unit": "个系统",
+        "description": "所有跟踪的原版功能均已实现。"
+      }
+    },
+    "groups": {
+      "hostile": "敌对生物",
+      "boss": "Boss 生物",
+      "passive": "被动生物",
+      "villager": "村民",
+      "projectile": "弹射物",
+      "vehicle": "载具",
+      "decoration": "装饰",
+      "misc": "杂项",
+      "blocks": "方块",
+      "fireSculk": "火与幽匿",
+      "pistons": "活塞",
+      "plantsCrops": "植物与作物",
+      "redstone": "红石",
+      "toolsWeapons": "工具与武器",
+      "throwables": "投掷物",
+      "placeables": "可放置物品",
+      "utility": "实用物品",
+      "vanilla": "原版",
+      "pumpkin": "Kabocha",
+      "core": "核心",
+      "powerSensors": "信号源与传感器",
+      "logicTiming": "逻辑与时序",
+      "mechanisms": "机械组件",
+      "interactive": "交互组件",
+      "equipment": "装备",
+      "mechanics": "机制",
+      "persistence": "持久化",
+      "logicPhysics": "逻辑与物理"
+    },
+    "entries": {
+      "entities": {
+        "blaze": "烈焰人",
+        "bogged": "沼骸",
+        "breeze": "旋风人",
+        "cave_spider": "洞穴蜘蛛",
+        "creaking": "嘎枝",
+        "creeper": "苦力怕",
+        "drowned": "溺尸",
+        "elder_guardian": "远古守卫者",
+        "enderman": "末影人",
+        "endermite": "末影螨",
+        "evoker": "唤魔者",
+        "ghast": "恶魂",
+        "giant": "巨人",
+        "guardian": "守卫者",
+        "hoglin": "疣猪兽",
+        "husk": "尸壳",
+        "illusioner": "幻术师",
+        "magma_cube": "岩浆怪",
+        "parched": "焦骸",
+        "phantom": "幻翼",
+        "piglin": "猪灵",
+        "piglin_brute": "猪灵蛮兵",
+        "pillager": "掠夺者",
+        "ravager": "劫掠兽",
+        "shulker": "潜影贝",
+        "silverfish": "蠹虫",
+        "skeleton": "骷髅",
+        "slime": "史莱姆",
+        "spider": "蜘蛛",
+        "stray": "流浪者",
+        "sulfur_cube": "硫方怪",
+        "vex": "恼鬼",
+        "vindicator": "卫道士",
+        "warden": "监守者",
+        "witch": "女巫",
+        "wither_skeleton": "凋灵骷髅",
+        "zoglin": "僵尸疣猪兽",
+        "zombie": "僵尸",
+        "zombie_villager": "僵尸村民",
+        "zombified_piglin": "僵尸猪灵",
+        "ender_dragon": "末影龙",
+        "wither": "凋灵",
+        "allay": "悦灵",
+        "armadillo": "犰狳",
+        "axolotl": "美西螈",
+        "bat": "蝙蝠",
+        "bee": "蜜蜂",
+        "camel": "骆驼",
+        "camel_husk": "骆驼尸壳",
+        "cat": "猫",
+        "chicken": "鸡",
+        "cod": "鳕鱼",
+        "copper_golem": "铜傀儡",
+        "cow": "牛",
+        "dolphin": "海豚",
+        "donkey": "驴",
+        "fox": "狐狸",
+        "frog": "青蛙",
+        "glow_squid": "发光鱿鱼",
+        "goat": "山羊",
+        "happy_ghast": "快乐恶魂",
+        "horse": "马",
+        "iron_golem": "铁傀儡",
+        "llama": "羊驼",
+        "mooshroom": "哞菇",
+        "mule": "骡",
+        "nautilus": "鹦鹉螺",
+        "ocelot": "豹猫",
+        "panda": "熊猫",
+        "parrot": "鹦鹉",
+        "pig": "猪",
+        "polar_bear": "北极熊",
+        "pufferfish": "河豚",
+        "rabbit": "兔子",
+        "salmon": "鲑鱼",
+        "sheep": "绵羊",
+        "skeleton_horse": "骷髅马",
+        "sniffer": "嗅探兽",
+        "snow_golem": "雪傀儡",
+        "squid": "鱿鱼",
+        "strider": "炽足兽",
+        "tadpole": "蝌蚪",
+        "trader_llama": "行商羊驼",
+        "tropical_fish": "热带鱼",
+        "turtle": "海龟",
+        "wolf": "狼",
+        "zombie_horse": "僵尸马",
+        "zombie_nautilus": "僵尸鹦鹉螺",
+        "mannequin": "玩家模型",
+        "villager": "村民",
+        "wandering_trader": "流浪商人",
+        "arrow": "箭",
+        "breeze_wind_charge": "风弹",
+        "dragon_fireball": "末影龙火球",
+        "egg": "掷出的鸡蛋",
+        "ender_pearl": "掷出的末影珍珠",
+        "evoker_fangs": "唤魔者尖牙",
+        "experience_bottle": "掷出的附魔之瓶",
+        "eye_of_ender": "末影之眼",
+        "fireball": "火球",
+        "firework_rocket": "烟花火箭",
+        "fishing_bobber": "浮漂",
+        "lingering_potion": "滞留药水",
+        "llama_spit": "羊驼唾沫",
+        "shulker_bullet": "潜影弹",
+        "small_fireball": "小火球",
+        "snowball": "雪球",
+        "spectral_arrow": "光灵箭",
+        "splash_potion": "喷溅药水",
+        "trident": "三叉戟",
+        "wind_charge": "风弹",
+        "wither_skull": "凋灵之首",
+        "acacia_boat": "金合欢木船",
+        "acacia_chest_boat": "金合欢木运输船",
+        "bamboo_chest_raft": "运输竹筏",
+        "bamboo_raft": "竹筏",
+        "birch_boat": "白桦木船",
+        "birch_chest_boat": "白桦木运输船",
+        "cherry_boat": "樱花木船",
+        "cherry_chest_boat": "樱花木运输船",
+        "chest_minecart": "运输矿车",
+        "command_block_minecart": "命令方块矿车",
+        "dark_oak_boat": "深色橡木船",
+        "dark_oak_chest_boat": "深色橡木运输船",
+        "furnace_minecart": "动力矿车",
+        "hopper_minecart": "漏斗矿车",
+        "jungle_boat": "丛林木船",
+        "jungle_chest_boat": "丛林木运输船",
+        "mangrove_boat": "红树木船",
+        "mangrove_chest_boat": "红树木运输船",
+        "minecart": "矿车",
+        "oak_boat": "橡木船",
+        "oak_chest_boat": "橡木运输船",
+        "pale_oak_boat": "苍白橡木船",
+        "pale_oak_chest_boat": "苍白橡木运输船",
+        "poplar_boat": "杨木船",
+        "poplar_chest_boat": "杨木运输船",
+        "spawner_minecart": "刷怪笼矿车",
+        "spruce_boat": "云杉木船",
+        "spruce_chest_boat": "云杉木运输船",
+        "tnt_minecart": "TNT矿车",
+        "armor_stand": "盔甲架",
+        "block_display": "方块展示实体",
+        "cushion": "坐垫",
+        "end_crystal": "末地水晶",
+        "glow_item_frame": "荧光物品展示框",
+        "interaction": "交互实体",
+        "item_display": "物品展示实体",
+        "item_frame": "物品展示框",
+        "leash_knot": "拴绳结",
+        "marker": "标记",
+        "painting": "画",
+        "text_display": "文本展示实体",
+        "area_effect_cloud": "区域效果云",
+        "experience_orb": "经验球",
+        "falling_block": "下落的方块",
+        "item": "物品",
+        "lightning_bolt": "闪电束",
+        "ominous_item_spawner": "不祥之物生成器",
+        "tnt": "被激活的TNT"
+      },
+      "blocks": {
+        "anvil": "铁砧",
+        "banners": "旗帜",
+        "barrel": "木桶",
+        "barrier": "屏障",
+        "beacon": "信标",
+        "bed": "床",
+        "beehive": "蜂箱与蜂巢",
+        "blast_furnace": "高炉",
+        "brewing_stand": "酿造台",
+        "bubble_column": "气泡柱",
+        "amethyst": "紫水晶母岩",
+        "cake": "蛋糕",
+        "campfire": "营火",
+        "candle_cakes": "插上蜡烛的蛋糕",
+        "candles": "蜡烛",
+        "carpet": "地毯",
+        "cartography_table": "制图台",
+        "carved_pumpkin": "雕刻南瓜（召唤傀儡）",
+        "cauldron": "炼药锅",
+        "chain": "锁链",
+        "chests": "箱子",
+        "chiseled_bookshelf": "雕纹书架",
+        "cobweb": "蜘蛛网",
+        "command": "命令方块",
+        "composter": "堆肥桶",
+        "conduit": "潮涌核心",
+        "crafting_table": "工作台",
+        "creaking_heart": "嘎枝之心",
+        "decorated_pot": "饰纹陶罐",
+        "dirt_path": "土径",
+        "doors": "门",
+        "dragon_egg": "龙蛋",
+        "dried_ghast": "失水恶魂",
+        "dripstone": "滴水石",
+        "enchanting_table": "附魔台",
+        "end_gateway": "末地折跃门",
+        "end_portal": "末地传送门",
+        "end_portal_frame": "末地传送门框架",
+        "end_rod": "末地烛",
+        "ender_chest": "末影箱",
+        "falling": "下落方块（沙子、沙砾、混凝土粉末）",
+        "farmland": "耕地",
+        "fence_gates": "栅栏门",
+        "fences": "栅栏",
+        "fletching_table": "制箭台",
+        "flower_pots": "花盆",
+        "frogspawn": "青蛙卵",
+        "furnace": "熔炉",
+        "glass_panes": "玻璃板",
+        "glazed_terracotta": "带釉陶瓦",
+        "grass_block": "草方块",
+        "grindstone": "砂轮",
+        "hay": "干草捆",
+        "honey": "蜂蜜块",
+        "hopper": "漏斗",
+        "huge_mushroom": "巨型蘑菇",
+        "ice": "冰与霜冰",
+        "infested": "虫蚀方块",
+        "iron_bars": "铁栏杆",
+        "jigsaw": "拼图方块",
+        "jukebox": "唱片机",
+        "ladder": "梯子",
+        "lanterns": "灯笼",
+        "leaves": "树叶",
+        "lectern": "讲台",
+        "light": "光源方块",
+        "lodestone": "磁石",
+        "logs": "原木（去皮）",
+        "loom": "织布机",
+        "magma": "岩浆块",
+        "mangrove_roots": "红树根",
+        "spawner": "刷怪笼",
+        "mud": "泥巴",
+        "nether_portal": "下界传送门",
+        "netherrack": "下界岩",
+        "note": "音符盒",
+        "nylium": "菌岩",
+        "potent_sulfur": "烈性硫黄",
+        "powder_snow": "细雪",
+        "pumpkin": "南瓜",
+        "respawn_anchor": "重生锚",
+        "rooted_dirt": "缠根泥土",
+        "scaffolding": "脚手架",
+        "shelf": "展示架",
+        "shulker_box": "潜影盒",
+        "signs": "告示牌",
+        "skull_block": "头颅",
+        "slabs": "台阶",
+        "slime": "黏液块",
+        "smithing_table": "锻造台",
+        "smoker": "烟熏炉",
+        "sniffer_egg": "嗅探兽蛋",
+        "snow": "雪",
+        "soul_sand": "灵魂沙",
+        "sponge": "海绵",
+        "stairs": "楼梯",
+        "stonecutter": "切石机",
+        "straw_bed": "麦秆床",
+        "structure_block": "结构方块",
+        "structure_void": "结构空位",
+        "brushable_block": "可疑的沙子与沙砾",
+        "test_block": "测试方块",
+        "tinted_glass": "遮光玻璃",
+        "tnt": "TNT",
+        "torches": "火把",
+        "trapdoor": "活板门",
+        "trial_spawner": "试炼刷怪笼",
+        "turtle_egg": "海龟蛋",
+        "vault": "宝库",
+        "vine": "藤蔓",
+        "walls": "墙",
+        "weathering_copper": "铜的氧化",
+        "wither_skull": "凋灵骷髅头颅（召唤凋灵）",
+        "fire-fire": "火",
+        "sculk-sculk_catalyst": "幽匿催发体",
+        "sculk-sculk_shrieker": "幽匿尖啸体",
+        "sculk-sculk_vein": "幽匿脉络",
+        "fire-soul_fire": "灵魂火",
+        "piston-piston_extension": "移动的活塞",
+        "piston-piston_head": "活塞头",
+        "piston-piston": "活塞",
+        "plant-crop-gourds-attached_stem": "结果的茎",
+        "plant-azalea": "杜鹃花丛",
+        "plant-bamboo": "竹子",
+        "plant-bamboo_sapling": "竹笋",
+        "plant-crop-beetroot": "甜菜根",
+        "plant-big_dripleaf": "大型垂滴叶",
+        "plant-big_dripleaf_stem": "大型垂滴叶茎",
+        "plant-bush": "灌木丛",
+        "plant-cactus": "仙人掌",
+        "plant-cactus_flower": "仙人掌花",
+        "plant-crop-carrot": "胡萝卜",
+        "plant-cave_vines": "洞穴藤蔓",
+        "plant-chorus_flower": "紫颂花",
+        "plant-chorus_plant": "紫颂植株",
+        "plant-cocoa": "可可果",
+        "coral-coral_block": "珊瑚块",
+        "coral-coral_fan": "珊瑚扇",
+        "coral-coral_plant": "珊瑚",
+        "plant-dry_vegetation": "干枯植被",
+        "plant-eyeblossom": "眼眸花",
+        "plant-flower": "花",
+        "plant-flowerbed": "花簇",
+        "plant-fungus": "菌类",
+        "plant-hanging_roots": "垂根",
+        "plant-kelp": "海带",
+        "plant-leaf_litter": "枯叶堆",
+        "plant-lily_pad": "睡莲",
+        "plant-mangrove_propagule": "红树胎生苗",
+        "plant-mushroom_plant": "蘑菇",
+        "plant-nether_sprouts": "下界苗",
+        "plant-crop-nether_wart": "下界疣",
+        "plant-pale_hanging_moss": "苍白垂须",
+        "plant-crop-pitcher_crop": "瓶子草植株",
+        "plant-crop-potatoes": "马铃薯",
+        "plant-crop-gourds-stem": "南瓜茎与西瓜茎",
+        "plant-roots": "菌索",
+        "plant-sapling": "树苗",
+        "plant-sea_pickles": "海泡菜",
+        "plant-seagrass": "海草",
+        "plant-shelf_mushroom": "层孔菇",
+        "plant-short_plant": "矮小植物（草、蕨）",
+        "plant-small_dripleaf": "小型垂滴叶",
+        "plant-spore_blossom": "孢子花",
+        "plant-sugar_cane": "甘蔗",
+        "plant-crop-sweet_berry_bush": "甜浆果丛",
+        "plant-tall_plant": "高大植物",
+        "plant-tall_seagrass": "高海草",
+        "plant-crop-torch_flower": "火把花植株",
+        "plant-twisting_vines": "缠怨藤",
+        "plant-weeping_vines": "垂泪藤",
+        "plant-crop-wheat": "小麦植株",
+        "plant-wither_rose": "凋灵玫瑰",
+        "redstone-rails-activator_rail": "激活铁轨",
+        "redstone-bell": "钟",
+        "redstone-buttons": "按钮",
+        "redstone-comparator": "红石比较器",
+        "redstone-copper_bulb": "铜灯",
+        "redstone-crafter": "合成器",
+        "redstone-daylight_detector": "阳光探测器",
+        "redstone-rails-detector_rail": "探测铁轨",
+        "redstone-dispenser": "发射器",
+        "redstone-dropper": "投掷器",
+        "redstone-lever": "拉杆",
+        "redstone-lightning_rod": "避雷针",
+        "redstone-observer": "侦测器",
+        "redstone-rails-powered_rail": "动力铁轨",
+        "redstone-pressure_plate-plate": "压力板",
+        "redstone-rails-rail": "铁轨",
+        "redstone-redstone_block": "红石块",
+        "redstone-redstone_lamp": "红石灯",
+        "redstone-redstone_ore": "红石矿石",
+        "redstone-redstone_torch": "红石火把",
+        "redstone-redstone_wire": "红石线",
+        "redstone-repeater": "红石中继器",
+        "redstone-sculk_sensor": "幽匿感测体",
+        "redstone-target_block": "标靶",
+        "redstone-tripwire": "绊线",
+        "redstone-tripwire_hook": "绊线钩",
+        "redstone-pressure_plate-weighted": "测重压力板"
+      },
+      "items": {
+        "arrow": "箭",
+        "axe": "斧",
+        "bow": "弓",
+        "brush": "刷子",
+        "crossbow": "弩",
+        "debug_stick": "调试棒",
+        "fishing_rod": "钓鱼竿",
+        "flint_and_steel": "打火石",
+        "hoe": "锄",
+        "mace": "重锤",
+        "shears": "剪刀",
+        "shield": "盾牌",
+        "shovel": "锹",
+        "spear": "矛",
+        "swords": "剑",
+        "trident": "三叉戟",
+        "experience_bottle": "附魔之瓶",
+        "chorus_fruit": "紫颂果",
+        "egg": "鸡蛋",
+        "ender_pearl": "末影珍珠",
+        "ender_eye": "末影之眼",
+        "fire_charge": "火焰弹",
+        "firework_rocket": "烟花火箭",
+        "potions": "药水",
+        "snowball": "雪球",
+        "wind_charge": "风弹",
+        "armor_stand": "盔甲架",
+        "boat": "船与竹筏",
+        "bucket": "桶",
+        "end_crystal": "末地水晶",
+        "hanging_entity": "物品展示框与画",
+        "place_on_water": "睡莲与青蛙卵",
+        "minecart": "矿车",
+        "spawn_egg": "刷怪蛋",
+        "bone_meal": "骨粉",
+        "writable_book": "书籍",
+        "bundle": "收纳袋",
+        "on_a_stick": "胡萝卜钓竿与诡异菌钓竿",
+        "clock": "时钟",
+        "compass": "指南针与追溯指针",
+        "cushion": "坐垫",
+        "dye": "染料",
+        "elytra": "鞘翅",
+        "glass_bottle": "玻璃瓶",
+        "glowing_ink_sac": "荧光墨囊",
+        "goat_horn": "山羊角",
+        "honeycomb": "蜜脾",
+        "ink_sac": "墨囊",
+        "knowledge_book": "知识之书",
+        "lead": "拴绳",
+        "map": "地图",
+        "name_tag": "命名牌",
+        "saddle": "鞍",
+        "spyglass": "望远镜",
+        "totem_of_undying": "不死图腾"
+      },
+      "redstone": {
+        "redstone-wire-signal-propagation": "红石线信号传播",
+        "redstone-tick-system": "红石 Tick 系统",
+        "hard-vs-soft-powering": "强充能与弱充能",
+        "pressure-plates": "压力板",
+        "tripwire-hook": "绊线钩",
+        "trapped-chest": "陷阱箱",
+        "sculk-sensors-shriekers-and-calibrated-sensors": "幽匿感测体、幽匿尖啸体和校频幽匿感测体",
+        "daylight-detector": "阳光探测器",
+        "target-block": "标靶",
+        "redstone-torch-levers-and-buttons": "红石火把、拉杆和按钮",
+        "comparator": "红石比较器",
+        "repeater": "红石中继器",
+        "note-block": "音符盒",
+        "hopper-item-transfer": "漏斗物品传输",
+        "observer": "侦测器",
+        "rails": "铁轨",
+        "pistons-and-block-swapping": "活塞与方块交换",
+        "dropper": "投掷器",
+        "dispenser": "发射器",
+        "crafter": "合成器",
+        "minecart-powering-and-activation": "矿车动力与激活",
+        "tnt-ignition-and-priming": "TNT 点燃与激活",
+        "bell": "钟",
+        "redstone-lamp": "红石灯",
+        "doors-gates-and-trapdoors": "门、栅栏门和活板门",
+        "lectern-signal-strength": "讲台信号强度",
+        "composter-signal-strength": "堆肥桶信号强度"
+      },
+      "combat": {
+        "basic-melee-attack": "基础近战攻击",
+        "tool-based-damage-calculation": "基于工具的伤害计算",
+        "vanilla-knockback": "原版击退",
+        "attack-speed-and-cooldown-indicator": "攻击速度与冷却指示器",
+        "bows": "弓",
+        "crossbows": "弩",
+        "shields": "盾牌",
+        "tridents": "三叉戟",
+        "critical-hits": "暴击",
+        "damage-invulnerability-frames": "受伤后的无敌时间",
+        "sweep-attack": "横扫攻击",
+        "enchantment-integration": "附魔集成",
+        "status-effect-integration": "状态效果集成",
+        "1-8-combat-mode": "1.8 战斗模式"
+      },
+      "world": {
+        "world-loading-level-dat-dim1-dim-1": "世界加载（level.dat、DIM1、DIM-1）",
+        "world-saving": "世界保存",
+        "chunk-loading-vanilla-linear-pump": "区块加载（vanilla、linear、pump）",
+        "chunk-saving": "区块保存",
+        "chunk-generation": "区块生成",
+        "flat-world-generation": "超平坦世界生成",
+        "redstone": "红石",
+        "liquid-physics": "流体物理",
+        "lighting": "光照",
+        "world-time": "世界时间",
+        "world-borders": "世界边界",
+        "world-joining": "加入世界",
+        "player-tab-list": "玩家 Tab 列表",
+        "scoreboard": "记分板",
+        "bossbar": "Boss 栏",
+        "entity-spawning": "实体生成"
+      }
+    },
+    "notes": {
+      "reviewChanged": "已审查的源码发生了变化，需要重新审查之前的评估。",
+      "sourceUnreviewed": "已找到实现源码，但尚未审查此快照中的行为。",
+      "giantGoals": "原版巨人没有注册任何 AI 目标。Kabocha 在此基础上添加了少量 AI 目标。",
+      "magmaCubeGoals": "基于史莱姆实体实现，因此继承了史莱姆的全部 AI 目标。",
+      "slimeParticles": "AI 目标与原版一致，落地粒子效果仍待实现。",
+      "dragonParts": "已构造末影龙的各个部件，但未将其注册到世界中。主碰撞箱的处理尚未完整实现基于各部件的伤害与接触行为。",
+      "sharedArrow": "共用箭实体。",
+      "frogspawnHatching": "可以放置，但不会孵化出蝌蚪。",
+      "lodestoneBinding": "尚未实现指南针绑定。",
+      "structureContents": "方块和方块实体会保存配置，但尚未实现结构内容的捕获或放置。",
+      "pistonRemoval": "已实现活塞头和底座的移除，但 break_block 不接收玩家参数，导致玩家上下文丢失；活塞系统的移动和持久化也存在其他缺失。",
+      "arrowRegistration": "负责注册，飞行和伤害由箭实体处理。",
+      "shieldRegistration": "负责注册，格挡由战斗代码处理。",
+      "swordRegistration": "负责注册，横扫和伤害由战斗代码处理。",
+      "chorusTeleport": "随机传送由生物实体的相关代码处理。",
+      "totemDeath": "由生物实体的死亡处理逻辑处理。",
+      "banipAlias": "/banip 的别名。",
+      "sourceUnknown": "尚未找到专门的实现源码，但这并不能证明该功能缺失。",
+      "pardonipAlias": "/pardonip 的别名。",
+      "saveallAlias": "/saveall 的别名。",
+      "saveoffAlias": "/saveoff 的别名。",
+      "saveonAlias": "/saveon 的别名。",
+      "msgAlias": "/msg 的别名。",
+      "teammsgAlias": "/teammsg 的别名。",
+      "teleportAlias": "/teleport 的别名。",
+      "pumpkinAlias": "/kabocha 的别名。",
+      "experienceAlias": "/experience 的别名。",
+      "versionInfo": "版本和构建信息。",
+      "pluginLoading": "加载和卸载插件。",
+      "pluginList": "列出已加载的插件。",
+      "ticksPerSecond": "每秒 Tick 数。",
+      "timing": "计时工具。",
+      "raidDebugging": "袭击调试。"
+    },
+    "items": {
+      "fireballShooting": "发射火球",
+      "flyingWander": "飞行游荡和观察",
+      "spawnChance": "生成概率规则",
+      "entityAttributes": "实体类型与属性",
+      "slimeGoals": "史莱姆 AI 目标：攻击、跳跃和分裂",
+      "netherSpawn": "下界生成规则",
+      "collisionDamage": "与玩家碰撞时造成伤害",
+      "peekAndShoot": "探头和射击 AI 目标",
+      "attachmentAndTeleport": "附着与传送",
+      "shulkerBullet": "潜影弹",
+      "slimeAttack": "大小、分裂和跳跃攻击",
+      "slimeSpawn": "史莱姆区块和沼泽的生成规则",
+      "dragonFlight": "飞行阶段、末地水晶、多部件位置和方块破坏",
+      "dragonContact": "注册可检测命中的部件，并按部件进行接触和击退判定",
+      "breeding": "繁殖、诱引和跟随亲代",
+      "eggLaying": "下蛋",
+      "slowFall": "缓慢下落",
+      "milking": "挤奶",
+      "mushroomStew": "蘑菇煲",
+      "mooshroomShearing": "修剪后变为牛",
+      "pigRiding": "鞍与胡萝卜钓竿",
+      "woolRegrowth": "吃草并重新长出羊毛",
+      "shearingAndDyeing": "剪毛与染色",
+      "snowballAttack": "雪球远程攻击",
+      "pumpkinShearing": "剪下南瓜",
+      "projectileFlight": "飞行、命中与拾取",
+      "hitDamage": "命中时造成伤害",
+      "hitTeleport": "命中时传送",
+      "throwerDamage": "对投掷者造成伤害",
+      "endermiteSpawn": "末影螨生成概率",
+      "sharedArrow": "共用箭实体",
+      "hitGlowing": "命中时施加发光效果",
+      "tridentPickup": "投掷三叉戟与拾取",
+      "tridentEnchantments": "通过物品实现忠诚与激流附魔",
+      "structureSettings": "设置界面与 NBT 持久化",
+      "structureExecution": "结构捕获、保存和加载的执行逻辑",
+      "pistonBaseRemoval": "活塞头被破坏时移除处于伸出状态的活塞底座",
+      "pistonBreakingPlayer": "将执行破坏操作的玩家传递给底座移除逻辑"
+    }
+  },
+  "download": {
+    "title": "下载 Kabocha",
+    "lede": "独立可执行文件。无需安装 Java。下载、运行，即可开玩。",
+    "pluginManager": "在找插件管理器？",
+    "installPpm": "安装 ppm（Kabocha 包管理器）↓",
+    "channel": "发布通道",
+    "channels": {
+      "stable": "稳定版",
+      "nightly": "每日构建"
+    },
+    "nightlyWarning": "每日构建直接来自最新提交，跳过发布流程。可能存在问题，请先备份世界。",
+    "generated": "{date} 生成。",
+    "detected": "已检测到当前设备",
+    "mostCommon": "最常见的下载",
+    "downloadFor": "下载适用于 {system} 的版本",
+    "downloadNightlyFor": "下载适用于 {system} 的每日构建",
+    "allFiles": "全部文件",
+    "releaseNotes": "发行说明",
+    "nightlyRelease": "每日构建发布页",
+    "olderVersions": "旧版本",
+    "allReleases": "全部版本",
+    "releaseFiles": "发布文件",
+    "system": "系统",
+    "architecture": "架构",
+    "file": "文件",
+    "download": "下载",
+    "thisDevice": "此设备",
+    "downloadFile": "下载 {file}",
+    "downloadNightlyFile": "下载每日构建 {file}",
+    "signing": "发布版本使用 SignPath 进行数字签名。免费代码签名由 <signpath>SignPath.io</signpath> 提供，证书由 <foundation>SignPath Foundation</foundation> 提供。",
+    "copy": "复制",
+    "copied": "已复制",
+    "copyInstall": "复制安装命令",
+    "copiedInstall": "已复制安装命令",
+    "copyPpmInstall": "复制 ppm 安装命令",
+    "copiedPpmInstall": "已复制 ppm 安装命令",
+    "installHint": "适用于 macOS、Linux 及其他类 Unix 系统。会安装到 <code>./kabocha-server</code>。",
+    "ppmInstallHint": "运行 <code>ppm self-install</code>，自动将可执行文件安装到 <code>~/.local/bin</code>（或 <code>/usr/local/bin</code>）。",
+    "ppm": {
+      "eyebrow": "官方包管理器",
+      "title": "Kabocha 包管理器（ppm）",
+      "github": "GitHub 仓库",
+      "marketplace": "插件市场",
+      "description": "<ppm>ppm</ppm> 是 Kabocha Minecraft 服务器插件的官方命令行工具与包管理器。你可以从插件市场搜索并安装 WebAssembly 插件、保持其更新，或通过交互式向导创建新的插件项目。",
+      "search": "按关键词或分类搜索插件市场中的插件",
+      "install": "下载 .wasm 插件并安装到服务器",
+      "new": "用 Rust、Python、Go 等创建新的插件项目",
+      "standalone": "独立二进制文件：",
+      "allReleases": "全部 ppm 版本 →"
+    },
+    "afterDownloading": "下载之后",
+    "steps": [
+      {
+        "title": "下载文件",
+        "body": "在上方获取适用于你系统的文件，或在 macOS 和 Linux 上使用安装脚本。它只有一个可执行文件，没有安装程序，也无需配置 Java。"
+      },
+      {
+        "title": "运行",
+        "body": "双击该可执行文件，或在终端中启动它。几毫秒后服务器就会开始运行。"
+      },
+      {
+        "title": "连接",
+        "body": "Java 版玩家通过 <code>25565</code> 端口加入，基岩版玩家通过 <code>19132</code> 端口加入。两个版本可以处在同一个世界中。"
+      },
+      {
+        "title": "配置",
+        "body": "查看<docs>配置文档</docs>了解所有选项；如果启动失败，也可以在 <discord>Discord</discord> 上提问。"
+      },
+      {
+        "title": "添加插件",
+        "body": "使用官方包管理器管理 WebAssembly 插件。用 <ppm>ppm</ppm> 安装，或在<market>插件市场</market>浏览社区作品。"
+      }
+    ],
+    "quickStart": "快速开始指南",
+    "discordHelp": "在 Discord 获取帮助",
+    "terminal": {
+      "label": "Kabocha 启动动画演示",
+      "running": "运行中",
+      "idle": "空闲"
+    }
+  },
+  "developers": {
+    "hero": {
+      "overline": "没有 NMS，没有反射，没有针对特定版本的 hack。",
+      "title": "开发插件，无需再受折磨",
+      "description": "只有干净、类型安全的 API。用你熟悉的语言编写，Kabocha 会把结果作为 WebAssembly 插件加载。",
+      "docs": "插件文档",
+      "source": "GitHub 源码"
+    },
+    "picker": {
+      "title": "选择你的语言",
+      "language": "插件语言",
+      "firstStep": "{language} 指南共 {count} 步，这是第一步。",
+      "noGuide": "{language} 还没有编写指南。",
+      "open": "打开指南"
+    },
+    "comparison": {
+      "title": "同样的功能，<hl>两套 API</hl>",
+      "description": "先发送欢迎消息，再用 Java 对话框或基岩版表单请求确认。在 Spigot 上，这意味着反射调用 NMS，还要再写一个插件；在 Kabocha 上，只需一个分支。",
+      "api": "选择 API",
+      "reflectionCalls": "{count} 次反射调用",
+      "spigot": {
+        "badge": "Spigot + 反射 NMS + Geyser API（Java）",
+        "facts": [
+          "需要 Geyser API",
+          "版本一变就失效"
+        ]
+      },
+      "pumpkin": {
+        "badge": "Kabocha 原生 API（Rust）",
+        "facts": [
+          "没有额外依赖",
+          "编译期检查"
+        ]
+      }
+    },
+    "featuresTitle": "API 能带给你什么",
+    "features": [
+      {
+        "title": "所有玩家，一个插件",
+        "body": "原生支持 Java 版和基岩版，内置多版本兼容。",
+        "rest": "写一次，覆盖所有人。"
+      },
+      {
+        "title": "类型安全的命令与事件",
+        "body": "注册命令，挂接带类型的插件事件",
+        "rest": "无需反射、NMS 或针对特定版本的 hack。"
+      },
+      {
+        "title": "默认异步",
+        "body": "基于 Tokio，没有主线程瓶颈。",
+        "rest": "繁重任务不会卡住服务器。"
+      },
+      {
+        "title": "内存安全",
+        "body": "Rust 的保证。",
+        "rest": "没有空指针、内存泄漏和数据竞争。"
+      }
+    ],
+    "quickStart": {
+      "title": "快速<hl>开始</hl>",
+      "description": "选择一种语言。每份指南都从空文件夹开始，直到生成 Kabocha 能加载的插件文件。",
+      "walkthrough": "完整教程见<docs>{documentation}</docs>。"
+    },
+    "ready": {
+      "title": "准备好开始了吗？",
+      "description": "文档涵盖事件、命令以及其余 API。遇到文档解答不了的问题，就来 Discord 提问。",
+      "getStarted": "开始使用",
+      "discord": "在 Discord 提问"
+    },
+    "guides": {
+      "terminal": "终端",
+      "projectLayout": "项目结构",
+      "copy": "复制",
+      "copied": "已复制",
+      "copyCommand": "复制命令",
+      "copiedCommand": "已复制命令",
+      "copyLabel": "复制 {label}",
+      "copiedLabel": "已复制 {label}",
+      "firstSteps": {
+        "c": "先下载 <sdk>wasi-sdk</sdk>，然后用它提供的 clang 编译。",
+        "d": "安装 <ldc>LDC</ldc> 1.43 或更高版本并附带 addon-wasi 包，另外还需要 <dub>DUB</dub>。",
+        "typescript": "还没有编写指南。API 位于 <api>kabocha-api-ts</api>。"
+      },
+      "rust": {
+        "docsLabel": "Rust 文档",
+        "steps": {
+          "create": "创建新项目",
+          "toolchain": "安装工具链",
+          "crate": "初始化新的 crate",
+          "configure": "配置 crate"
+        },
+        "text": {
+          "build": "Kabocha 插件使用 Cargo 构建系统。",
+          "template": "这个插件的完整代码可以在 <template>GitHub 模板</template> 中找到。",
+          "target": "编译插件之前，必须先安装 <code>wasm32-wasip2</code> 目标。可以运行以下命令安装：",
+          "folder": "首先需要创建一个新的项目文件夹。可以在你创建的文件夹中运行以下命令：",
+          "cargo": "接下来需要创建一个名为 <code>.cargo</code> 的目录，并在其中添加一个内容如下的 <code>config.toml</code> 文件：",
+          "tree": "最终你的文件夹结构应该是这样：",
+          "cdylib": "由于 Kabocha 插件在运行时作为动态库加载，我们需要让 Cargo 把这个 crate 构建为动态库。",
+          "deps": "接下来需要添加一些基本依赖。由于 Kabocha 仍处于早期开发阶段，内部 crate 尚未发布到 crates.io，因此需要让 Cargo 直接从 GitHub 下载依赖。"
+        }
+      },
+      "python": {
+        "docsLabel": "Python 文档",
+        "steps": {
+          "install": "安装",
+          "create": "创建你的第一个插件",
+          "build": "构建插件"
+        },
+        "text": {
+          "install": "首先，你需要安装 <code>kabocha-api-py</code> 库：",
+          "file": "创建一个名为 <code>main.py</code> 的文件，并添加以下内容：",
+          "build": "使用提供的构建工具将插件构建为 WebAssembly 组件：",
+          "output": "这会生成一个 <code>my_plugin.wasm</code> 文件，可以放入 Kabocha 服务器的 plugins 文件夹。"
+        }
+      },
+      "csharp": {
+        "docsLabel": "C# 文档",
+        "steps": {
+          "install": "安装",
+          "create": "创建你的第一个插件",
+          "build": "构建插件"
+        },
+        "text": {
+          "sdk": "编译 Kabocha 的 C# 插件需要 <code>.NET SDK</code> 和 WASI 工作负载。",
+          "library": "创建一个新的类库，并添加以下代码：",
+          "build": "使用 WASI 运行时标识符将插件编译为 WebAssembly：",
+          "output": "这会在输出目录中生成一个 <code>.wasm</code> 文件，Kabocha 可以加载它。"
+        }
+      },
+      "c": {
+        "docsLabel": "GitHub 仓库",
+        "steps": {
+          "install": "安装",
+          "create": "创建你的第一个插件",
+          "build": "构建插件"
+        },
+        "text": {
+          "sdk": "编译 Kabocha 的 C/C++ 插件需要 <code>wasi-sdk</code>。请从 <sdk>wasi-sdk 仓库</sdk> 下载最新版本。",
+          "repo": "这个插件的完整代码可以在 <repo>kabocha-api-c 仓库</repo> 中找到。",
+          "file": "创建一个名为 <code>main.c</code> 的文件，并添加以下内容：",
+          "clang": "请使用 <code>wasi-sdk</code> 中的 <code>clang</code> 将这个插件编译为 WebAssembly 组件：",
+          "output": "这会生成一个 <code>my_plugin.wasm</code> 文件，Kabocha 可以加载它。"
+        }
+      },
+      "go": {
+        "docsLabel": "Go 文档",
+        "steps": {
+          "install": "安装",
+          "create": "创建你的第一个插件",
+          "build": "构建插件"
+        },
+        "text": {
+          "tools": "编译 Kabocha 的 Go 插件需要 <go>Go 1.23 或更高版本</go> 和 <code>tinygo</code>。",
+          "file": "创建一个名为 <code>main.go</code> 的文件，并添加以下内容：",
+          "build": "使用 <code>tinygo</code> 将插件编译为 WebAssembly：",
+          "output": "这会生成一个 <code>my_plugin.wasm</code> 文件，Kabocha 可以加载它。"
+        }
+      },
+      "kotlin": {
+        "docsLabel": "Kotlin 文档",
+        "steps": {
+          "install": "安装",
+          "create": "创建你的第一个插件",
+          "build": "构建插件"
+        },
+        "text": {
+          "needs": "你需要安装一些工具。",
+          "rust": "Rust（仅默认/宿主工具链）",
+          "wasmTools": "wasm-tools",
+          "make": "<code>make</code>（例如 <make>GNU Make</make>）",
+          "template": "与大多数其他 API 不同，这个 API 实际上是一个模板。请克隆它并重命名。",
+          "rename": "然后修改 <code>settings.gradle.kts</code> 中的 <code>rootProject.name</code>，以及 <code>Makefile</code> 中的 <code>PROJECT_NAME</code>。两者必须一致。你给项目起的名字也会成为生成的 Wasm 文件名。",
+          "prepared": "模板中已经准备好一些代码。<code>src/wasmWasiMain/kotlin/plugin/Plugin.kt</code> 包含：",
+          "makeCommand": "运行 <code>Makefile</code> 将插件编译为 WebAssembly：",
+          "slow": "第一次构建会比较慢，因为它需要从源码构建一些 Rust 依赖。",
+          "output": "完成后，<code>my_kotlin_plugin.wasm</code>（或你的 Gradle 项目名）会出现在 <code>build</code> 中，可以直接加载到 Kabocha。"
+        }
+      },
+      "d": {
+        "docsLabel": "D 文档",
+        "steps": {
+          "install": "安装",
+          "create": "创建你的第一个插件",
+          "build": "构建插件"
+        },
+        "text": {
+          "needs": "需要 <ldc>LDC</ldc> 1.43 或更高版本并安装 <code>addon-wasi</code> 包，另外还需要 <dub>DUB</dub>。",
+          "package": "绑定来自 <api>kabocha-api-d</api> 包。请在插件旁边创建一个 <code>dub.json</code> 来声明它：",
+          "source": "然后把插件本身放在 <code>source/app.d</code> 中：",
+          "dub": "使用 DUB 将插件编译为面向 <code>wasm32-wasip2</code> 的 WebAssembly 组件：",
+          "output": "<code>my-d-plugin.wasm</code> 会出现在项目根目录，可以直接加载到 Kabocha。"
+        }
+      },
+      "zig": {
+        "docsLabel": "Zig 文档",
+        "steps": {
+          "install": "搭建项目",
+          "create": "创建你的第一个插件",
+          "build": "构建插件"
+        },
+        "text": {
+          "needs": "需要 <zig>Zig</zig> 0.16.0 或更高版本，并确保 <code>PATH</code> 中包含 <tools>wasm-tools</tools>。",
+          "fetch": "获取并添加 <api>kabocha-api-zig</api> 包作为依赖：",
+          "buildFile": "在项目根目录创建一个 <code>build.zig</code> 文件：",
+          "source": "在 <code>src/main.zig</code> 中创建插件源码：",
+          "build": "将插件编译为 WebAssembly 组件：",
+          "output": "这会生成 <code>zig-out/my-zig-plugin.wasm</code>，可以直接加载到 Kabocha。"
+        }
+      },
+      "typescript": {
+        "docsLabel": "kabocha-api-ts 仓库",
+        "intro": "TypeScript 目前还没有编写快速开始文档。API 及其安装说明位于 <repo>kabocha-api-ts 仓库</repo>。"
+      }
+    }
+  },
+  "sponsor": {
+    "title": "赞助",
+    "description": "与 Kabocha 合作。选择赞助套餐，获得项目致谢、社区特权或企业品牌展示。",
+    "manage": "管理赞助 →",
+    "community": {
+      "title": "社区支持者档位",
+      "description": "按月订阅，享有数字特权和名录展示。"
+    },
+    "perMonth": "每月",
+    "monthlyPrice": "{amount} / 月",
+    "selectTier": "选择档位",
+    "selectTierLabel": "选择每月 {amount} 的{tier}档位",
+    "tiers": {
+      "bronze": "青铜",
+      "silver": "白银",
+      "gold": "黄金",
+      "platinum": "白金",
+      "titanium": "钛金",
+      "diamond": "钻石",
+      "corporateBronze": "企业青铜",
+      "corporateSilver": "企业白银",
+      "corporateGold": "企业黄金",
+      "corporatePlatinum": "企业白金"
+    },
+    "monthlyPerks": {
+      "bronze": "致谢名单展示与 Discord 身份组",
+      "silver": "致谢名单、链接与 Discord 身份组",
+      "gold": "黄金致谢、链接与 Discord 身份组",
+      "platinum": "优先致谢、头像与链接",
+      "titanium": "精选致谢、头像与链接",
+      "diamond": "顶级致谢、头像与链接"
+    },
+    "corporate": {
+      "title": "企业赞助",
+      "description": "通过致谢名单中的标志展示和外链，推广你的公司、主机服务或开发工具。",
+      "select": "选择套餐",
+      "selectLabel": "选择每月 {amount} 的{tier}套餐"
+    },
+    "corporatePerks": {
+      "corporateBronze": "致谢名单中的标志与链接",
+      "corporateSilver": "优先展示的标志与链接",
+      "corporateGold": "精选展示的标志与链接",
+      "corporatePlatinum": "顶级展示的标志与链接"
+    },
+    "partners": {
+      "title": "合作伙伴与赞助者",
+      "description": "这些公司和社区成员正在积极支持 Kabocha 的开发。",
+      "list": "赞助者列表",
+      "active": "当前",
+      "past": "往期赞助者",
+      "private": "匿名赞助者",
+      "loadError": "暂时无法从服务器加载赞助者，请稍后再试。",
+      "loading": "正在加载赞助者……",
+      "noCurrent": "还没有当前赞助者，你可以成为第一个。",
+      "noPast": "没有往期赞助者。"
+    },
+    "terms": {
+      "title": "销售、计费与交付政策",
+      "digital": "<b>数字交付：</b>数字特权——包括 Discord 社区支持者身份组、网站致谢名单，以及企业标志与链接展示——会在付款成功后以数字方式开通。如果你的数字特权需要人工设置或 Discord 同步，我们会在 24 小时内确认访问权限。",
+      "corporate": "<b>企业赞助准则：</b>企业赞助档位包含 arkflame.com/Kabocha-Page 上的标志展示和外链致谢。所有品牌素材和链接都会依据社区准则进行审核。对于违反这些标准的素材，Kabocha 保留拒绝或要求修改的权利。",
+      "billing": "<b>计费与取消：</b>月度赞助按周期自动计费，可随时通过<portal>Stripe 客户门户</portal>修改或取消。取消将在当前计费周期结束时生效。",
+      "refund": "<b>退款政策：</b>由于数字特权、社区身份组和名录展示会立即交付，付款一旦生效便不予退款，适用法律另有规定的除外。",
+      "signing": "<b>代码签名：</b>免费代码签名由 <signpath>SignPath.io</signpath> 提供，证书由 <foundation>SignPath Foundation</foundation> 提供。Kabocha 的发布版本使用 SignPath 进行数字签名。"
+    }
+  },
+  "contributors": {
+    "title": "由贡献者共同打造",
+    "description": "Kabocha 由一个出色的开源社区共同构建。下面的每一次提交，都是某人利用业余时间完成的。",
+    "contributors": "位贡献者",
+    "commits": "次提交",
+    "contributorLabel": "{name}，{count} 次提交",
+    "mostCommits": "提交最多",
+    "everyoneElse": "其他所有人",
+    "people": "{count} 人",
+    "loading": "正在加载贡献者……",
+    "loadError": "加载贡献者失败，请稍后再试。",
+    "rateLimitReset": "已达到 GitHub API 速率限制，将于 {time} 重置，请稍后再试。",
+    "rateLimitSoon": "已达到 GitHub API 速率限制，即将重置，请稍后再试。",
+    "fullList": "完整名单始终可在 <github>GitHub</github> 上查看。",
+    "contributeTitle": "想参与贡献吗？",
+    "contributeDescription": "加入我们的社区，一起打造史上最快的 Minecraft 服务器。",
+    "guide": "贡献指南",
+    "github": "在 GitHub 上查看",
+    "discord": "加入 Discord"
+  },
+  "stats": {
+    "live": "实时遥测",
+    "title": "生态系统遥测",
+    "description": "Kabocha 与 Vine 部署的实时网络遥测、全球节点分布、硬件基础设施和社区服务器分析数据。",
+    "timeRange": "时间范围",
+    "lastPolled": "上次更新",
+    "connecting": "连接中……",
+    "refresh": "刷新",
+    "apiDocs": "API 文档",
+    "unavailable": "目前无法连接遥测服务，页面每分钟重试一次。",
+    "loading": "加载中……",
+    "ranges": {
+      "24h": {
+        "label": "24 小时",
+        "long": "过去 24 小时"
+      },
+      "7d": {
+        "label": "7 天",
+        "long": "过去 7 天"
+      },
+      "30d": {
+        "label": "30 天",
+        "long": "过去 30 天"
+      },
+      "90d": {
+        "label": "90 天",
+        "long": "过去 90 天"
+      },
+      "all": {
+        "label": "全部",
+        "long": "全部时间"
+      }
+    },
+    "kpi": {
+      "activeServers": "活跃服务器 · {range}",
+      "peakPlayers": "峰值玩家 · {range}",
+      "liveNow": "当前 {count} 台在线 · Kabocha {kabocha} · Vine {vine}",
+      "onlineNow": "当前 {count} 人在线",
+      "countries": "国家/地区",
+      "mostServers": "服务器最多：{country}",
+      "plugins": "已跟踪插件",
+      "mostUsed": "最常用：{plugin}"
+    },
+    "activity": {
+      "title": "活动趋势",
+      "description": "{range}内的同时在线玩家和在线服务器。",
+      "metric": "指标",
+      "noData": "没有可用的遥测趋势数据。",
+      "showTable": "显示数据表",
+      "hideTable": "隐藏数据表",
+      "time": "时间",
+      "chartLabel": "{series}，{range}。使用方向键读取数值。",
+      "seriesJoiner": "与"
+    },
+    "series": {
+      "onlinePlayers": "在线玩家",
+      "peakPlayers": "峰值玩家",
+      "pumpkinServers": "Kabocha 服务器",
+      "vineServers": "Vine 服务器"
+    },
+    "summary": {
+      "peak": "峰值",
+      "average": "平均",
+      "low": "最低",
+      "latest": "最新"
+    },
+    "metrics": {
+      "players": "玩家",
+      "servers": "服务器"
+    },
+    "map": {
+      "title": "服务器分布",
+      "description": "活跃服务器与玩家流量的地理分布。点击国家/地区可在列表中定位。",
+      "metric": "地图指标",
+      "fewer": "较少",
+      "moreServers": "更多服务器",
+      "morePlayers": "更多玩家",
+      "topLocation": "热门地区",
+      "regions": "国家/地区",
+      "reportedPlayers": "上报玩家",
+      "playersPerServer": "每服务器玩家数",
+      "loading": "正在加载地图……",
+      "error": "地图加载失败。",
+      "tooltip": "{servers} 台服务器 · {players} 名玩家",
+      "noReporting": "没有上报的服务器"
+    },
+    "geoDetail": "{servers} 台服务器 · {players} 名玩家",
+    "countries": {
+      "title": "国家/地区",
+      "description": "按托管国家/地区统计的服务器与玩家流量。",
+      "sort": "排序依据",
+      "empty": "没有上报地理位置数据。"
+    },
+    "plugins": {
+      "title": "热门插件",
+      "description": "上报服务器中采用率最高的插件。",
+      "empty": "没有上报插件遥测数据。",
+      "detail": "{count} 台服务器 · {percent}"
+    },
+    "players": {
+      "title": "玩家",
+      "description": "上报服务器汇总的在线模式比例，以及匿名的玩家客户端构成。",
+      "breakdown": "玩家构成",
+      "edition": "Java / 基岩版",
+      "editionDescription": "活跃服务器上 Java 版与基岩版客户端数量之和。",
+      "online": "在线模式",
+      "onlineDescription": "活跃服务器上使用 Mojang 与 Xbox Live 验证，还是离线或代理模式。",
+      "view": "视距",
+      "viewDescription": "已连接玩家设置的客户端区块渲染距离。",
+      "empty": "暂无上报数据。",
+      "clientBrands": "客户端品牌",
+      "clientBrandsDescription": "已连接客户端上报的 Minecraft 启动器和模组加载器。",
+      "clientBrandsEmpty": "暂无客户端品牌数据。",
+      "locales": "玩家语言",
+      "localesDescription": "已连接玩家设置的首选语言。",
+      "localesEmpty": "暂无玩家语言数据。"
+    },
+    "systems": {
+      "title": "系统与硬件",
+      "description": "服务器主机上报的操作系统、CPU 架构、软件版本和内存占用。",
+      "os": "操作系统",
+      "arch": "CPU 架构",
+      "software": "软件版本",
+      "minecraft": "Minecraft 版本",
+      "serverMemory": "分配的服务器内存",
+      "hostMemory": "主机内存",
+      "pluginLanguages": "插件语言",
+      "pluginLanguagesDescription": "上报服务器上活跃插件使用的绑定语言。",
+      "pluginLanguagesEmpty": "没有上报插件语言数据。",
+      "cpus": "服务器 CPU",
+      "cpusDescription": "上报次数最多的处理器。",
+      "empty": "没有上报数据。",
+      "rustNative": "Rust（原生）"
+    },
+    "distribution": {
+      "showLess": "收起",
+      "showMore": "再显示 {count} 项"
+    },
+    "privacy": {
+      "title": "保护隐私的开放遥测",
+      "body": "Kabocha 与 Vine 的遥测完全透明、不识别个人身份，并以隐私优先。我们收集聚合后的系统指标（操作系统、CPU 架构、内存范围、软件版本、验证模式，以及不含用户名、IP 或原始 UUID 的匿名玩家客户端设置），用于性能基准测试、多线程优化，以及确定 Minecraft 版本兼容性的优先级。要了解更多或集成你自己的工具，请访问<docs>遥测 API 文档</docs>，或查看我们 <github>GitHub 仓库</github> 中的遥测模块。"
+    }
+  },
+  "notFound": {
+    "title": "这个页面不存在。",
+    "description": "链接可能已经过期，或者页面在网站重建时被移动了。下面是大多数人想找的地方。",
+    "home": "返回首页",
+    "download": "下载 Kabocha",
+    "docs": "阅读文档"
+  },
+  "metadata": {
+    "home": {
+      "title": "Kabocha - 极速 Minecraft 服务器",
+      "description": "Kabocha：最快、最高效的 Minecraft 服务器软件，使用 Rust 编写。"
+    },
+    "download": {
+      "title": "下载 Kabocha - 极速 Minecraft 服务器",
+      "description": "下载 Kabocha 最新版本，最快的 Minecraft 服务器。"
+    },
+    "developers": {
+      "title": "开发者 - Kabocha",
+      "description": "为什么开发者喜欢在 Kabocha 上开发：类型安全的命令、可变事件、Java + 基岩版支持，以及更多。"
+    },
+    "sponsor": {
+      "title": "赞助 - Kabocha",
+      "description": "成为赞助者，支持 Kabocha 的开发，解锁社区特权和品牌展示。"
+    },
+    "contributors": {
+      "title": "贡献者 - Kabocha",
+      "description": "认识为 Kabocha 这个最快的 Minecraft 服务器做出贡献的人们。"
+    },
+    "stats": {
+      "title": "遥测与统计 - Kabocha",
+      "description": "Kabocha 与 Vine 的实时生态遥测、服务器健康状况、硬件分布、全球地图和社区统计。"
+    },
+    "tracker": {
+      "title": "原版功能进度 - Kabocha",
+      "description": "所有跟踪的原版功能均已实现。"
+    },
+    "notFound": {
+      "title": "页面未找到 - Kabocha",
+      "description": "arkflame.com/Kabocha-Page 上不存在此页面。"
+    }
+  },
+  "footer": {
+    "description": "用 Rust 编写的 Minecraft 服务器。启动快、运行轻巧、可自由修改。",
+    "useIt": {
+      "heading": "使用",
+      "gettingStarted": "快速开始",
+      "configuration": "配置",
+      "troubleshooting": "故障排查"
+    },
+    "buildOnIt": {
+      "heading": "开发",
+      "pluginDocs": "插件文档",
+      "developers": "开发者指南",
+      "examples": "示例",
+      "contributing": "参与贡献"
+    },
+    "follow": {
+      "heading": "关注",
+      "blog": "博客",
+      "stats": "统计",
+      "parity": "原版功能进度",
+      "benchmarks": "性能测试",
+      "sponsorship": "赞助"
+    },
+    "project": {
+      "heading": "项目",
+      "releases": "发布版本",
+      "reportBug": "报告问题",
+      "contributors": "贡献者",
+      "license": "许可证",
+      "repositories": "所有仓库"
+    },
+    "credit": "由 <purdze>purdze</purdze>、<megalith>MegalithOfficial</megalith> 和贡献者用 ❤️ 制作 · GPL-3.0",
+    "disclaimer": "这不是 Minecraft 官方产品，未经 Mojang 或 Microsoft 批准，也与两家公司无关。"
+  }
+}

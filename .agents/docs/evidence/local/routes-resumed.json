@@ -1,0 +1,506 @@
+[
+  {
+    "url": "http://[::1]:4321/Kabocha-Page/contributors/",
+    "h1": "Built by its contributors.",
+    "width": 1342,
+    "height": 3746,
+    "scrollWidth": 1342,
+    "brokenImages": [],
+    "unloadedVisibleImages": 0,
+    "mapShapes": 0,
+    "route": "contributors",
+    "viewport": "desktop",
+    "browserErrors": {
+      "errors": [],
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 4078172084952800937
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      }
+    }
+  },
+  {
+    "url": "http://[::1]:4321/Kabocha-Page/",
+    "h1": "A Minecraft server that boots in 5 ms.",
+    "width": 768,
+    "height": 4646,
+    "scrollWidth": 768,
+    "brokenImages": [],
+    "unloadedVisibleImages": 0,
+    "mapShapes": 0,
+    "route": "home",
+    "viewport": "tablet",
+    "browserErrors": {
+      "errors": [],
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 4078172084952800937
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      }
+    }
+  },
+  {
+    "url": "http://[::1]:4321/Kabocha-Page/contributors/",
+    "h1": "Built by its contributors.",
+    "width": 768,
+    "height": 4975,
+    "scrollWidth": 768,
+    "brokenImages": [],
+    "unloadedVisibleImages": 0,
+    "mapShapes": 0,
+    "route": "contributors",
+    "viewport": "tablet",
+    "browserErrors": {
+      "errors": [],
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 4078172084952800937
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      }
+    }
+  },
+  {
+    "url": "http://[::1]:4321/Kabocha-Page/stats/",
+    "h1": "Ecosystem telemetry.",
+    "width": 768,
+    "height": 4928,
+    "scrollWidth": 768,
+    "brokenImages": [],
+    "unloadedVisibleImages": 0,
+    "mapShapes": 0,
+    "route": "stats",
+    "viewport": "tablet",
+    "browserErrors": {
+      "errors": [],
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 4078172084952800937
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      }
+    }
+  },
+  {
+    "url": "http://[::1]:4321/Kabocha-Page/tracker/#all",
+    "h1": "Vanilla parity",
+    "width": 768,
+    "height": 34703,
+    "scrollWidth": 768,
+    "brokenImages": [],
+    "unloadedVisibleImages": 0,
+    "mapShapes": 0,
+    "route": "tracker",
+    "viewport": "tablet",
+    "browserErrors": {
+      "errors": [],
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 4078172084952800937
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      }
+    }
+  },
+  {
+    "url": "http://[::1]:4321/Kabocha-Page/parity/#all",
+    "h1": "Vanilla parity",
+    "width": 768,
+    "height": 34703,
+    "scrollWidth": 768,
+    "brokenImages": [],
+    "unloadedVisibleImages": 0,
+    "mapShapes": 0,
+    "route": "parity",
+    "viewport": "tablet",
+    "browserErrors": {
+      "errors": [],
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 4078172084952800937
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      }
+    }
+  },
+  {
+    "url": "http://[::1]:4321/Kabocha-Page/sponsor/",
+    "h1": "Sponsorship.",
+    "width": 768,
+    "height": 3053,
+    "scrollWidth": 768,
+    "brokenImages": [],
+    "unloadedVisibleImages": 0,
+    "mapShapes": 0,
+    "route": "donate",
+    "viewport": "tablet",
+    "browserErrors": {
+      "errors": [],
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 4078172084952800937
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      }
+    }
+  },
+  {
+    "url": "http://[::1]:4321/Kabocha-Page/404.html",
+    "h1": "This page does not exist.",
+    "width": 768,
+    "height": 1454,
+    "scrollWidth": 768,
+    "brokenImages": [],
+    "unloadedVisibleImages": 0,
+    "mapShapes": 0,
+    "route": "notfound",
+    "viewport": "tablet",
+    "browserErrors": {
+      "errors": [],
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 4078172084952800937
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      }
+    }
+  },
+  {
+    "url": "http://[::1]:4321/Kabocha-Page/",
+    "h1": "A Minecraft server that boots in 5 ms.",
+    "width": 390,
+    "height": 6431,
+    "scrollWidth": 390,
+    "brokenImages": [],
+    "unloadedVisibleImages": 0,
+    "mapShapes": 0,
+    "route": "home",
+    "viewport": "mobile",
+    "browserErrors": {
+      "errors": [],
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 4078172084952800937
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      }
+    }
+  },
+  {
+    "url": "http://[::1]:4321/Kabocha-Page/download/",
+    "h1": "Download Kabocha.",
+    "width": 390,
+    "height": 2822,
+    "scrollWidth": 390,
+    "brokenImages": [],
+    "unloadedVisibleImages": 0,
+    "mapShapes": 0,
+    "route": "download",
+    "viewport": "mobile",
+    "browserErrors": {
+      "errors": [],
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 4078172084952800937
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      }
+    }
+  },
+  {
+    "url": "http://[::1]:4321/Kabocha-Page/developers/",
+    "h1": "Build plugins without the pain.",
+    "width": 390,
+    "height": 6882,
+    "scrollWidth": 390,
+    "brokenImages": [],
+    "unloadedVisibleImages": 0,
+    "mapShapes": 0,
+    "route": "developers",
+    "viewport": "mobile",
+    "browserErrors": {
+      "errors": [],
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 4078172084952800937
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      }
+    }
+  },
+  {
+    "url": "http://[::1]:4321/Kabocha-Page/sponsor/",
+    "h1": "Sponsorship.",
+    "width": 390,
+    "height": 4486,
+    "scrollWidth": 390,
+    "brokenImages": [],
+    "unloadedVisibleImages": 0,
+    "mapShapes": 0,
+    "route": "sponsor",
+    "viewport": "mobile",
+    "browserErrors": {
+      "errors": [],
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 4078172084952800937
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      }
+    }
+  },
+  {
+    "url": "http://[::1]:4321/Kabocha-Page/contributors/",
+    "h1": "Built by its contributors.",
+    "width": 390,
+    "height": 6909,
+    "scrollWidth": 390,
+    "brokenImages": [],
+    "unloadedVisibleImages": 0,
+    "mapShapes": 0,
+    "route": "contributors",
+    "viewport": "mobile",
+    "browserErrors": {
+      "errors": [],
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 4078172084952800937
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      }
+    }
+  },
+  {
+    "url": "http://[::1]:4321/Kabocha-Page/stats/",
+    "h1": "Ecosystem telemetry.",
+    "width": 390,
+    "height": 6235,
+    "scrollWidth": 390,
+    "brokenImages": [],
+    "unloadedVisibleImages": 0,
+    "mapShapes": 0,
+    "route": "stats",
+    "viewport": "mobile",
+    "browserErrors": {
+      "errors": [],
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 4078172084952800937
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      }
+    }
+  },
+  {
+    "url": "http://[::1]:4321/Kabocha-Page/tracker/#all",
+    "h1": "Vanilla parity",
+    "width": 390,
+    "height": 35511,
+    "scrollWidth": 390,
+    "brokenImages": [],
+    "unloadedVisibleImages": 0,
+    "mapShapes": 0,
+    "route": "tracker",
+    "viewport": "mobile",
+    "browserErrors": {
+      "errors": [],
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 4078172084952800937
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      }
+    }
+  },
+  {
+    "url": "http://[::1]:4321/Kabocha-Page/parity/#all",
+    "h1": "Vanilla parity",
+    "width": 390,
+    "height": 35511,
+    "scrollWidth": 390,
+    "brokenImages": [],
+    "unloadedVisibleImages": 0,
+    "mapShapes": 0,
+    "route": "parity",
+    "viewport": "mobile",
+    "browserErrors": {
+      "errors": [],
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 4078172084952800937
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      }
+    }
+  },
+  {
+    "url": "http://[::1]:4321/Kabocha-Page/sponsor/",
+    "h1": "Sponsorship.",
+    "width": 390,
+    "height": 4486,
+    "scrollWidth": 390,
+    "brokenImages": [],
+    "unloadedVisibleImages": 0,
+    "mapShapes": 0,
+    "route": "donate",
+    "viewport": "mobile",
+    "browserErrors": {
+      "errors": [],
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 4078172084952800937
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      }
+    }
+  },
+  {
+    "url": "http://[::1]:4321/Kabocha-Page/404.html",
+    "h1": "This page does not exist.",
+    "width": 390,
+    "height": 1471,
+    "scrollWidth": 390,
+    "brokenImages": [],
+    "unloadedVisibleImages": 0,
+    "mapShapes": 0,
+    "route": "notfound",
+    "viewport": "mobile",
+    "browserErrors": {
+      "errors": [],
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 4078172084952800937
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      }
+    }
+  }
+]

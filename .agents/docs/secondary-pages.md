@@ -1,0 +1,7 @@
+# Secondary pages handoff
+
+Download, sponsorship and stats were expanded with channel, pricing and dashboard controls. Download reads the Kabocha GitHub releases API and falls back to the source build guide; sponsorship amounts are explicitly illustrative and link to project issues, not a payment service. Stats contains empty states, not upstream metrics. No Kabocha sponsorship funding destination was found in this website repository. The source build and released assets were not independently exercised here. The dashboard has no telemetry endpoint, so refresh only reports that fact. PPM is not presented as a Kabocha installer.
+
+Verification: UNVERIFIED pending primary build and browser/keyboard/responsive checks. Stats now restores the upstream dashboard composition, map engine, distribution panels, chart grid and controls. The empty chart intentionally has no plotted observations and the map has no telemetry shading; localized no-source notices need follow-up. Upstream page compositions informed this adaptation; upstream license credit remains in the repository.
+
+Stats follow-up checks: `./node_modules/.bin/tsc --noEmit --pretty false` exit 0; `node --test src/kabocha/pages/stats/stats.test.mjs` exit 0 (one source-structure regression). No production build or browser rendering/interaction verification was run. Map zoom now supports keyboard activation; chart, map and distribution data remain empty until a real Kabocha source exists.

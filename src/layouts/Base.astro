@@ -1,0 +1,25 @@
+---
+import "../kabocha/styles/main.css";
+import { routes, type PageId } from "../kabocha/routes";
+import { renderHead } from "../kabocha/head";
+
+interface Props {
+  id: PageId;
+}
+
+const { id } = Astro.props;
+const route = routes.find((item) => item.id === id) ?? routes[0];
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const head = renderHead(route, true, base);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <Fragment set:html={head} />
+    <link rel="stylesheet" href={base + "/fonts/bricolage-grotesque.css"} />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
