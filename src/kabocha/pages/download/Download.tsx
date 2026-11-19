@@ -21,7 +21,8 @@ export default function Download() {
       .then(setReleases).catch(() => { if (!controller.signal.aborted || timeoutReached) setError(true); });
     return () => { clearTimeout(timeout); controller.abort(); };
   }, [attempt]);
-  const release = releases?.find(item => item.prerelease === (channel === "nightly"));
+  // Kabocha publishes every build as a pre-release, so Stable falls back to the newest release.
+  const release = releases?.find(item => item.prerelease === (channel === "nightly")) ?? (channel === "stable" ? releases?.[0] : undefined);
   async function copy() { try { await navigator.clipboard.writeText(command); setCopied("Copied!"); } catch { setCopied("Copy failed; select the command instead."); } }
   return <div className="mx-auto max-w-325 px-5 py-14 md:px-8 md:py-20">
     <p className="font-mono text-xs tracking-wider text-pumpkin uppercase">Get started</p><h1 className="mt-4 text-[clamp(2.6rem,6vw,5rem)] leading-none font-extrabold">Download <span className="text-pumpkin">Kabocha</span>.</h1><p className="mt-5 max-w-2xl text-lg text-muted">Choose a release or build Kabocha from source.</p>
